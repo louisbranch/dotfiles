@@ -38,6 +38,7 @@ set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 " Indentation Settings
 set tabstop=2                    " Global tab width.
+set softtabstop=2                " Global softtab width.
 set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 
@@ -48,20 +49,6 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 " Or use vividchalk
 colorscheme xoria256
 
-" Tab mappings.
-map <leader>tt :tabnew<cr>
-map <leader>te :tabedit
-map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprevious<cr>
-map <leader>tf :tabfirst<cr>
-map <leader>tl :tablast<cr>
-map <leader>tm :tabmove
-
-" Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :FuzzyFinderTextMate<Enter>
-
 " Controversial...swap colon and semicolon for easier commands
 nnoremap ; :
 nnoremap : ;
@@ -69,6 +56,6 @@ nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 
-" Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+hi IndentGuidesOdd  ctermbg=234
+hi IndentGuidesEven ctermbg=233
+autocmd VimEnter * :IndentGuidesEnable
