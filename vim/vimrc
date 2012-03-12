@@ -56,6 +56,7 @@ nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 
+let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=234
 hi IndentGuidesEven ctermbg=233
 autocmd VimEnter * :IndentGuidesEnable
