@@ -5,11 +5,11 @@
     ln -s ~/dotfiles/vim/vimrc ~/.vimrc
     ln -s ~/dotfiles/vim ~/.vim
 
-## Adding nother Plugins
+## Adding other Plugins
 
     git submodule add [plugin url] vim/bundle/[plugin name]
 
-## Updating Plugings
+## Updating Plugis
 
     git submodule init
     git submodule update
