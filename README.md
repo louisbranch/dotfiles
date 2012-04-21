@@ -9,7 +9,7 @@
 
     git submodule add [plugin url] vim/bundle/[plugin name]
 
-## Updating Plugis
+## Updating Plugins
 
     git submodule init
     git submodule update

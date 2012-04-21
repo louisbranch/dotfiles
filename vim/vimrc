@@ -6,6 +6,8 @@ set nocompatible                  " Must come first because it changes other opt
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
+:let mapleader = ","              " Map leader to , (ABNT2 Keyboard)
+
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
@@ -44,7 +46,7 @@ set expandtab                    " Use spaces instead of tabs
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+set statusline=%{fugitive#statusline()}\ [%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " Or use vividchalk
 colorscheme xoria256
@@ -56,7 +58,22 @@ nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 
+" Map to open files in the same directory as the current file
+noremap <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" MiniBuffExplorer configs
+let g:miniBufExplMapWindowNavVim = 1    " control + the vim direction keys[hjkl] can be made to move you between windows. 
+let g:miniBufExplMapWindowNavArrows = 1 " control + arrow keys can be made to do the same thing 
+
 let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=234
 hi IndentGuidesEven ctermbg=233
 autocmd VimEnter * :IndentGuidesEnable
+
+nmap <silent> <Leader>rr :call RunRubyCurrentFileConque()<CR>
+nmap <silent> <Leader>ss :call RunRspecCurrentFileConque()<CR>
+nmap <silent> <Leader>ll :call RunRspecCurrentLineConque()<CR>
+nmap <silent> <Leader>cc :call RunCucumberCurrentFileConque()<CR>
+nmap <silent> <Leader>cl :call RunCucumberCurrentLineConque()<CR>
+nmap <silent> <Leader>RR :call RunRakeConque()<CR>
+nmap <silent> <Leader>rl :call RunLastConqueCommand()<CR>
