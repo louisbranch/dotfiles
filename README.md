@@ -6,9 +6,12 @@
     ln -s ~/dotfiles/bash/bash_profile ~/.bash_profile
     ln -s ~/dotfiles/bash/bash_aliases ~/.bash_aliases
 
-## Configuring tmux
+## Configuring tmux and tmuxinator
 
     ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+
+    gem install tmuxinator
+    ln -s ~/dotfiles/tmux/tmuxinator ~/.tmuxinator
 
 ## Configuring vim
 
