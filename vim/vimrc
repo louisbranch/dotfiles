@@ -48,10 +48,13 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=%{fugitive#statusline()}\ [%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-" Or use vividchalk
+" Xoria256 Color Theme
 colorscheme xoria256
 
-" Controversial...swap colon and semicolon for easier commands
+" Remove trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Swap colon and semicolon for easier commands
 nnoremap ; :
 nnoremap : ;
 
@@ -62,14 +65,17 @@ vnoremap : ;
 noremap <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " MiniBuffExplorer configs
-let g:miniBufExplMapWindowNavVim = 1    " control + the vim direction keys[hjkl] can be made to move you between windows. 
-let g:miniBufExplMapWindowNavArrows = 1 " control + arrow keys can be made to do the same thing 
+let g:miniBufExplMapWindowNavVim = 1    " control + the vim direction keys[hjkl] can be made to move you between windows.
+let g:miniBufExplMapWindowNavArrows = 1 " control + arrow keys can be made to do the same thing
 
 " Indent Tabs configuration
 let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=234
 hi IndentGuidesEven ctermbg=233
 autocmd VimEnter * :IndentGuidesEnable
+
+" Highligh json as javascript
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " Rspec plugin mapping
 noremap <leader>rr :call RunRubyCurrentFileConque()<CR>
