@@ -46,3 +46,6 @@
 [submodule "vim/bundle/vim-stylus"]
 	path = vim/bundle/vim-stylus
 	url = https://github.com/wavded/vim-stylus
+[submodule "vim/bundle/vimerl"]
+	path = vim/bundle/vimerl
+	url = https://github.com/jimenezrick/vimerl.git
