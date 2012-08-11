@@ -1,0 +1,13 @@
+# ~/.tmuxinator/nerdquest.yml
+
+project_name: nerdquest
+project_root: ~/workspace/nerdquest
+tabs:
+  - editor: vi
+  - compiler:
+      layout: main-vertical
+      panes:
+        - coffee -cwo js/ src/
+        - stylus -w src/public/stylesheets/ --out js/public/stylesheets/
+        - node js/app.js
+
