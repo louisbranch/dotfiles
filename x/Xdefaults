@@ -2,5 +2,5 @@
 *foreground: #FFFFFF
 
 URxvt.scrollBar: false
-URxvt.font: xft:terminus:size=14
+URxvt.font: xft:terminus:size=16
 URxvt.termName:screen-256color
