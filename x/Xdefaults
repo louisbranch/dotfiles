@@ -3,3 +3,4 @@
 
 URxvt.scrollBar: false
 URxvt.font: xft:mono:size=14
+URxvt.termName:screen-256color
