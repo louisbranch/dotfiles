@@ -2,3 +2,4 @@
 exec ck-launch-session gnome-session
 xset +fp /usr/share/fonts/local
 xset fp rehash
+dropboxd
