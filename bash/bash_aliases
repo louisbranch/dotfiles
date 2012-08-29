@@ -2,12 +2,10 @@
 alias gs='git status'
 alias gb='git branch'
 alias gp='git pull'
+alias gpp='git push'
 alias gcm='git checkout master'
 alias gcs='git checkout staging'
 alias gcp='git checkout production'
 
-#Rails
-alias ss='script/server'
-
 #Projects
-alias rp='cd ~/workspace/replaypoker'
+alias rp='cd ~/work/replaypoker'

@@ -1,11 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/luiz/workspace/replaypoker/app/controllers'
-let g:netrw_dirhist_2='/etc/X11'
-let g:netrw_dirhist_3='/home/luiz/workspace/replaypoker/public/chrome-store'
-let g:netrw_dirhist_4='/home/luiz/workspace/replaypoker/app/views/admin/invoices'
-let g:netrw_dirhist_5='/home/luiz/workspace/nerdquest/src/public/javascripts/routes'
-let g:netrw_dirhist_6='/home/luiz/workspace/replaypoker/app/models/achievements'
-let g:netrw_dirhist_7='/home/luiz/workspace/replaypoker/app/views/user_daily_bonus'
-let g:netrw_dirhist_8='/home/luiz/workspace/replaypoker/app/views/shared'
-let g:netrw_dirhist_9='/home/luiz/workspace/replaypoker/app/views/dashboard'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/luiz/work/replaypoker/app/assets/stylesheets'
+let g:netrw_dirhist_2='/home/luiz/work/okitoki/src'
+let g:netrw_dirhist_3='/home/luiz/work/replaypoker/app/assets/stylesheets'
+let g:netrw_dirhist_4='/home/luiz/work/replaypoker/app/views/admin/dashboard'
+let g:netrw_dirhist_5='/home/luiz/work/hubot/.git'

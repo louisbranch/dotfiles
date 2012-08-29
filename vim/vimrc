@@ -7,6 +7,17 @@ syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 filetype plugin on
 
+" Set Unicode
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+endif"
+
 :let mapleader = ","              " Map leader to , (ABNT2 Keyboard)
 
 set showcmd                       " Display incomplete commands.

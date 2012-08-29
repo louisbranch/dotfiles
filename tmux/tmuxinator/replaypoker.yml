@@ -3,5 +3,5 @@
 project_name: replaypoker
 project_root: ~/workspace/replaypoker
 tabs:
-  - editor: vi
+  - editor: vim
   - server: sudo /etc/init.d/resque-server start

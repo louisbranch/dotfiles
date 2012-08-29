@@ -3,7 +3,7 @@
 project_name: nerdquest
 project_root: ~/workspace/nerdquest
 tabs:
-  - editor: vi
+  - editor: vim
   - compiler:
       layout: main-vertical
       panes:
