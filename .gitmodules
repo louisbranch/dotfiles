@@ -52,3 +52,6 @@
 [submodule "vim/bundle/yaml-vim"]
 	path = vim/bundle/yaml-vim
 	url = https://github.com/ingydotnet/yaml-vim
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = git://github.com/tpope/vim-markdown.git
