@@ -1,5 +1,6 @@
 # Starts Gnome GMD on boot
-exec ck-launch-session gnome-session
+# exec ck-launch-session gnome-session
+exec i3
 
 # Load custom fonts (Terminus)
 xset +fp /usr/share/fonts/local
@@ -7,6 +8,3 @@ xset fp rehash
 
 # Active Numlock on boot, requires numlockx
 numlockx &
-
-# Start dropbox sync
-dropboxd
