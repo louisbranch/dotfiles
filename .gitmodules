@@ -58,3 +58,6 @@
 [submodule "vim/bundle/typescript-vim"]
 	path = vim/bundle/typescript-vim
 	url = git://github.com/leafgarland/typescript-vim.git
+[submodule "vim/bundle/handlebars"]
+	path = vim/bundle/handlebars
+	url = git://github.com/nono/vim-handlebars.git
