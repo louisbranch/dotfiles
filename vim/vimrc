@@ -97,3 +97,7 @@ nmap <silent> <Leader>cc :call RunCucumberCurrentFileConque()<CR>
 nmap <silent> <Leader>cl :call RunCucumberCurrentLineConque()<CR>
 nmap <silent> <Leader>RR :call RunRakeConque()<CR>
 nmap <silent> <Leader>rl :call RunLastConqueCommand()<CR>
+
+" Auto open QuickFix
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
