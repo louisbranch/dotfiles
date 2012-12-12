@@ -67,3 +67,9 @@
 [submodule "vim/bundle/vim-dart"]
 	path = vim/bundle/vim-dart
 	url = git://github.com/bartekd/vim-dart.git
+[submodule "vim/bundle/vim-javascript-syntax"]
+	path = vim/bundle/vim-javascript-syntax
+	url = https://github.com/jelera/vim-javascript-syntax
+[submodule "vim/bundle/vim-javascript-indentation"]
+	path = vim/bundle/vim-javascript-indentation
+	url = git://github.com/pangloss/vim-javascript.git
