@@ -11,3 +11,10 @@ alias gcp='git checkout production'
 
 #Projects
 alias rp='cd ~/work/replaypoker'
+
+#Transmission
+alias pirateon='sudo rc.d start transmissiond'
+alias pirateoff='sudo rc.d stop transmissiond'
+
+#Pacman
+alias update='sudo pacman -Syy && sudo pacman -Syu'

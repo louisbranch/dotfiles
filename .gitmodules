@@ -61,3 +61,9 @@
 [submodule "vim/bundle/handlebars"]
 	path = vim/bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "vim/bundle/mustache"]
+	path = vim/bundle/mustache
+	url = https://github.com/juvenn/mustache.vim
+[submodule "vim/bundle/vim-dart"]
+	path = vim/bundle/vim-dart
+	url = git://github.com/bartekd/vim-dart.git

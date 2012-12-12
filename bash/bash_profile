@@ -1,4 +1,6 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-case $- in *i*) . ~/.bashrc;; esac
-case $- in *i*) . ~/.bash_aliases;; esac
+for file in ~/.{extra,bash_prompt,exports,bash_aliases,functions}; do
+  [ -r "$file" ] && source "$file"
+done
+unset file
