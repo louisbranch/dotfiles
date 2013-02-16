@@ -11,6 +11,7 @@ alias gcp='git checkout production'
 
 #Projects
 alias rp='cd ~/work/replaypoker'
+alias productionx='bundle exec rake production deploy'
 
 #Transmission
 alias pirateon='sudo rc.d start transmissiond'
