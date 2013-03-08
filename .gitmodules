@@ -73,3 +73,6 @@
 [submodule "vim/bundle/vim-javascript-indentation"]
 	path = vim/bundle/vim-javascript-indentation
 	url = git://github.com/pangloss/vim-javascript.git
+[submodule "vim/bundle/vundle"]
+	path = vim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
