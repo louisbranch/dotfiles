@@ -1,4 +1,7 @@
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Add Dart bins to PATH
+PATH=$PATH:~/programs/dart-sdk/bin
 
 for file in ~/.{extra,bash_prompt,exports,bash_aliases,functions}; do
   [ -r "$file" ] && source "$file"

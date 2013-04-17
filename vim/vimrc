@@ -45,6 +45,9 @@ set scrolloff=3                   " Show 3 lines of context around the cursor.
 set title                         " Set the terminal's title
 
 set visualbell                    " No beeping.
+set noerrorbells                  " No beeping.
+
+set clipboard=unnamed             " Share system clipboard.
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
@@ -99,3 +102,16 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" Get rid of search hilighting with ,/
+nnoremap <silent> <leader>/ :nohlsearch<CR>
+
+" Sudo save
+cmap w!! w !sudo tee % >/dev/null
+
+" TaskList
+map <leader>l <Plug>TaskList
+
+" Saved regex
+" %s/:\(\w\{-}\) =>/\1:/gc  // Find old ruby hash syntax :foo => and replace
+" with foo:
