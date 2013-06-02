@@ -1,10 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/luiz/work/replaypoker/app/assets/javascripts/templates/lobby/ring_games'
-let g:netrw_dirhist_2='/home/luiz/work/corruption/public/images'
-let g:netrw_dirhist_3='/home/luiz/work/corruption/server/routes'
-let g:netrw_dirhist_4='/home/luiz/work/replaypoker/app/serializers/views/dashboard'
-let g:netrw_dirhist_5='/home/luiz/work/replaypoker/app/serializers/views/activity'
-let g:netrw_dirhist_6='/home/luiz/work/moving_castles/.git'
-let g:netrw_dirhist_7='/home/luiz/work/replaypoker/lib'
-let g:netrw_dirhist_8='/home/luiz/work/replaypoker/app/views'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/luiz/work/replaypoker/config/locales'
+let g:netrw_dirhist_2='/home/luiz/work/moving_castles'
+let g:netrw_dirhist_3='/home/luiz/work/replaypoker/app/controllers/controller_extensions'
+let g:netrw_dirhist_4='/home/luiz/work/gttserver'

@@ -1,5 +1,8 @@
 alias vi='vim'
 
+#Shell
+alias ls='ls --color'
+
 #Git
 alias gs='git status'
 alias gb='git branch'
@@ -8,6 +11,7 @@ alias gpp='git push'
 alias gcm='git checkout master'
 alias gcp='git checkout production'
 alias gfr='git fetch && git rebase'
+alias gdc='git diff --cached'
 
 #Projects
 alias rp='cd ~/work/replaypoker'
