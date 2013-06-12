@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/luiz/work/replaypoker/config/locales'
 let g:netrw_dirhist_2='/home/luiz/work/moving_castles'
 let g:netrw_dirhist_3='/home/luiz/work/replaypoker/app/controllers/controller_extensions'
 let g:netrw_dirhist_4='/home/luiz/work/gttserver'
+let g:netrw_dirhist_5='/home/luiz/gtt/bin'
+let g:netrw_dirhist_6='/home/luiz/code/gtt/bin'
+let g:netrw_dirhist_7='/home/luiz/code/infection'
+let g:netrw_dirhist_8='/home/luiz/code/infection/.git'

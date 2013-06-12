@@ -14,13 +14,13 @@ alias gfr='git fetch && git rebase'
 alias gdc='git diff --cached'
 
 #Projects
-alias rp='cd ~/work/replaypoker'
+alias rp='cd ~/code/replaypoker'
 alias productionx='bundle exec rake production deploy'
 alias poker='rails runner "RP2Server.start(1)"'
 
 #Transmission
-alias pirateon='sudo systemctl start transmissiond.service'
-alias pirateoff='sudo systemctl stop transmissiond.service'
+alias pirateon='sudo systemctl start transmission.service'
+alias pirateoff='sudo systemctl stop transmission.service'
 
 #Pacman
 alias update='sudo pacman -Syyu'

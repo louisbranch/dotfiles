@@ -13,3 +13,6 @@ numlockx &
 
 # Disable system beep
 xset -b
+
+# Start Dropboxd
+dropboxd
