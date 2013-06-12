@@ -1,6 +1,9 @@
 # Starts Gnome GMD on boot
 # exec ck-launch-session gnome-session
 
+# Starts urxvt daemon
+urxvtd -q -o -f
+
 # Starts i3 tile window manager
 exec i3
 
@@ -14,5 +17,5 @@ numlockx &
 # Disable system beep
 xset -b
 
-# Start Dropboxd
+# Start Dropbox daemon
 dropboxd

@@ -18,7 +18,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvtc -name shell
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -153,7 +153,13 @@ exec --no-startup-id feh --bg-max --no-xinerama ~/Dropbox/bg.jpg
 
 # Disable titlebar for applications
 for_window [class="^Chromium$"] border none
-for_window [class="urxvt"] border none
+for_window [instance="shell"] border none
 
 # Custom Keybinds
 bindsym XF86HomePage exec chromium
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5dB- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# Launch programs
+exec --no-startup-id i3-msg 'workspace 2; exec chromium; workspace 1; exec urxvtc;'

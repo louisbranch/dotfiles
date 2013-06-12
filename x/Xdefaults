@@ -1,13 +1,13 @@
-*background: #111111
-*foreground: #FFFFFF
+*background:                #111111
+*foreground:                #FFFFFF
 
-URxvt.scrollBar: false
-URxvt.font: xft:terminus:size=16
-URxvt.termName:screen-256color
-URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
+URxvt.scrollBar:            false
+URxvt.font:                 xft:terminus:size=20
+URxvt.termName:             screen-256color
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,fullscreen
 URxvt.url-select.launcher:  chromium
 URxvt.url-select.underline: true
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
-
+URxvt.keysym.F11:  perl:fullscreen:switch

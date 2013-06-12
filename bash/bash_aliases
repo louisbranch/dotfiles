@@ -19,8 +19,8 @@ alias productionx='bundle exec rake production deploy'
 alias poker='rails runner "RP2Server.start(1)"'
 
 #Transmission
-alias pirateon='sudo systemctl start transmission.service'
-alias pirateoff='sudo systemctl stop transmission.service'
+alias pirateon='sudo systemctl start transmission'
+alias pirateoff='sudo systemctl stop transmission'
 
 #Pacman
 alias update='sudo pacman -Syyu'
