@@ -76,3 +76,15 @@
 [submodule "vim/bundle/vundle"]
 	path = vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
+[submodule "tlib_vim"]
+	path = tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "vim-addon-mw-utils"]
+	path = vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "vim-snipmate"]
+	path = vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim/bundle/snipmate-mocha"]
+	path = vim/bundle/snipmate-mocha
+	url = https://github.com/mmozuras/snipmate-mocha
