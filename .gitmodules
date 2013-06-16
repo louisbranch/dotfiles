@@ -85,6 +85,3 @@
 [submodule "vim-snipmate"]
 	path = vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
-[submodule "vim/bundle/snipmate-mocha"]
-	path = vim/bundle/snipmate-mocha
-	url = https://github.com/mmozuras/snipmate-mocha
