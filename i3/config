@@ -137,16 +137,16 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   status_command i3status
-  tray_output DVI-D-0
+  tray_output HDMI-0
   mode hide
   modifier Mod4
   font pango:Terminus 20px
 }
 
 # Set dual monitors layout
-exec xrandr --output DVI-I-0 --auto --right-of DVI-D-0
-workspace 1 output DVI-D-0
-workspace 2 output DVI-I-0
+#exec xrandr --output DVI-I-0 --auto --right-of DVI-D-0
+workspace 1 output HDMI-0
+workspace 2 output DVI-I-1
 
 # Set background image
 exec --no-startup-id feh --bg-max --no-xinerama ~/Dropbox/bg.jpg
