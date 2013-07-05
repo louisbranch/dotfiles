@@ -4,15 +4,15 @@
 # Starts urxvt daemon
 urxvtd -q -o -f
 
+# Active Numlock on boot, requires numlockx
+numlockx &
+
 # Starts i3 tile window manager
 exec i3
 
 # Load custom fonts (Terminus)
 xset +fp /usr/share/fonts/local
 xset fp rehash
-
-# Active Numlock on boot, requires numlockx
-numlockx &
 
 # Disable system beep
 xset -b
