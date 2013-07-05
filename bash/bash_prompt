@@ -3,8 +3,6 @@
 
 default_username='luiz'
 
-
-
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
   export TERM=gnome-256color
 elif infocmp xterm-256color >/dev/null 2>&1; then
@@ -39,28 +37,35 @@ else
 fi
 
 
-function parse_git_dirty() {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
-}
-
-function parse_git_branch() {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
-}
-
 # Only show username/host if not default
 function usernamehost() {
-  if [ $USER != $default_username ]; then echo "${MAGENTA}$USER ${WHITE}at ${ORANGE}$HOSTNAME $WHITEin "; fi
+  if [ $USER != $default_username ]; then echo "${MAGENTA}$USER ${WHITE}at ${ORANGE}$HOSTNAME ${WHITE}in "; fi
 }
 
-# iTerm Tab and Title Customization and prompt customization
-# http://sage.ucsc.edu/xtal/iterm_tab_customization.html
+# Git prompt components
+function minutes_since_last_commit {
+    now=`date +%s`
+    last_commit=`git log --pretty=format:'%at' -1`
+    seconds_since_last_commit=$((now-last_commit))
+    minutes_since_last_commit=$((seconds_since_last_commit/60))
+    echo $minutes_since_last_commit
+}
+git_prompt() {
+    local g="$(__gitdir)"
+    if [ -n "$g" ]; then
+        local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
+        if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
+            local COLOR=${MAGENTA}
+        elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 10 ]; then
+            local COLOR=${ORANGE}
+        else
+            local COLOR=${GREEN}
+        fi
+        local SINCE_LAST_COMMIT="${COLOR}$(minutes_since_last_commit)m${NORMAL}"
+        # The __git_ps1 function inserts the current git branch where %s is
+        local GIT_PROMPT=`__git_ps1 "${WHITE} %s:${SINCE_LAST_COMMIT}${WHITE}"`
+        echo ${GIT_PROMPT}
+    fi
+}
 
-# Put the string " [bash]   hostname::/full/directory/path"
-# in the title bar using the command sequence
-# \[\e]2;[bash]   \h::\]$PWD\[\a\]
-
-# Put the penultimate and current directory
-# in the iterm tab
-# \[\e]1;\]$(basename $(dirname $PWD))/\W\[\a\]
-
-PS1="\[\e]2;$PWD\[\a\]\[\e]1;\]$(basename "$(dirname "$PWD")")/\W\[\a\]${BOLD}\$(usernamehost)\[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+PS1="\[\e]2;$PWD\[\a\]\[\e]1;\]$(basename "$(dirname "$PWD")")/\W\[\a\]${BOLD}\$(usernamehost)\[$GREEN\]\w\[$WHITE\]\$(git_prompt)\[$WHITE\]\n→ \[$RESET\]"

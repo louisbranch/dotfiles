@@ -112,6 +112,11 @@ cmap w!! w !sudo tee % >/dev/null
 " TaskList
 map <leader>l <Plug>TaskList
 
+" FuzzyFinder
+nnoremap <silent> <leader>f :FufFile **/<CR>
+hi Pmenu ctermfg=255
+hi Pmenu ctermbg=233
+
 " Saved regex
 " %s/:\(\w\{-}\) =>/\1:/gc  // Find old ruby hash syntax :foo => and replace
 " with foo:

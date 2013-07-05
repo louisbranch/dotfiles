@@ -1,22 +1,42 @@
 alias vi='vim'
 
+#System
+alias off='poweroff'
+
 #Shell
 alias ls='ls --color'
+alias tree='tree -L 2'
+alias q='exit'
 
 #Git
 alias gs='git status'
+alias gsu='git pull --recurse-submodules'
 alias gb='git branch'
 alias gp='git pull'
 alias gpp='git push'
 alias gcm='git checkout master'
 alias gcp='git checkout production'
 alias gfr='git fetch && git rebase'
+alias gd='git diff .'
 alias gdc='git diff --cached'
+gbn() { # New branch from master
+  gcm && git checkout -b $1
+}
+gbd() { # Delete branch local and remote
+  git branch -d $1 && git push origin :$1
+}
 
 #Projects
 alias rp='cd ~/code/replaypoker'
-alias productionx='bundle exec rake production deploy'
-alias poker='rails runner "RP2Server.start(1)"'
+deploy() { # Deploy to remote machines
+  bundle exec rake $1 deploy
+}
+poker() {
+  rails runner "RP2Server.start($1)"
+}
+
+#Rails
+alias migrate='bundle exec rake db:migrate && bundle exec rake db:test:prepare'
 
 #Transmission
 alias pirateon='sudo systemctl start transmission'
