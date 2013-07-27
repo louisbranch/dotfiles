@@ -25,6 +25,9 @@ gbn() { # New branch from master
 gbd() { # Delete branch local and remote
   git branch -d $1 && git push origin :$1
 }
+gri() { # Git rebase interactively last n commits
+  git rebase -i HEAD~$1
+}
 
 #Projects
 alias rp='cd ~/code/replaypoker'

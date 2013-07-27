@@ -91,12 +91,12 @@
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
-[submodule "vim/bundle/vim-fuzzyfinder"]
-	path = vim/bundle/vim-fuzzyfinder
-	url = https://github.com/clones/vim-fuzzyfinder
 [submodule "vim/bundle/L9"]
 	path = vim/bundle/L9
 	url = https://github.com/vim-scripts/L9
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
+[submodule "vim/bundle/fuzzyfinder"]
+	path = vim/bundle/fuzzyfinder
+	url = https://github.com/vim-scripts/FuzzyFinder

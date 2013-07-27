@@ -25,6 +25,10 @@
   dc = diff --cached
   amend = commit --amend
   aa = add --all
+  l = "!. ~/.githelpers && pretty_git_log"
+  r = !git l -30
+  ra = !git r --all
+  rmu = clean -f -d
 
 [merge]
   tool = vimdiff

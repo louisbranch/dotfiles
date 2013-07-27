@@ -1,14 +1,9 @@
 [ -n "$PS1" ] && source ~/.bash_profile
 
-# Check if there is support for 256 colors
-# export TERM=screen-256color
+export EDITOR=vim
 
 # Start ssh-agent
 eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
-
-# EC2 Commands
-source /home/luiz/work/replaypoker/ec2/env
-export JAVA_HOME=/opt/java/jre
 
 # Starts tmux
 if [[ ! $TERM =~ screen ]]; then
@@ -17,3 +12,12 @@ fi
 
 # Mute terminal beeps
 xset b off >&/dev/null
+
+# Bash history across tmux sessions
+# Appends cmd to bash history and reload it
+export PROMPT_COMMAND="history -a; history -n"
+
+# EC2 Commands
+source /home/luiz/work/replaypoker/ec2/env
+export JAVA_HOME=/opt/java/jre
+

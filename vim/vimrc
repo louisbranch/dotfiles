@@ -83,6 +83,7 @@ noremap <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " MiniBuffExplorer configs
 let g:miniBufExplMapWindowNavVim = 1    " control + the vim direction keys[hjkl] can be made to move you between windows.
+let g:miniBufExplStatusLineText = ''
 
 " Indent Tabs configuration
 let g:indent_guides_auto_colors = 0

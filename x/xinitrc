@@ -4,6 +4,11 @@
 # Starts urxvt daemon
 urxvtd -q -o -f
 
+# Enable custom keys
+if [ -s ~/.Xmodmap ]; then
+  xmodmap ~/.Xmodmap
+fi
+
 # Active Numlock on boot, requires numlockx
 numlockx &
 
