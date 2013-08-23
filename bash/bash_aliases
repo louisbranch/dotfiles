@@ -37,6 +37,9 @@ deploy() { # Deploy to remote machines
 poker() {
   rails runner "RP2Server.start($1)"
 }
+restart() {
+  bundle exec rake $1 rp2server:restart
+}
 
 #Rails
 alias migrate='bundle exec rake db:migrate && bundle exec rake db:test:prepare'
