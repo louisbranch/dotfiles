@@ -33,7 +33,7 @@ set wildmode=list:longest         " Complete files like a shell.
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
 
-set number                        " Show line numbers.
+set relativenumber                " Show relative line numbers.
 set ruler                         " Show cursor position.
 
 set incsearch                     " Highlight matches as you type.
@@ -121,3 +121,13 @@ hi Pmenu ctermbg=233
 " Saved regex
 " %s/:\(\w\{-}\) =>/\1:/gc  // Find old ruby hash syntax :foo => and replace
 " with foo:
+
+" Switch between absolute and relative numbers
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+nnoremap <C-n> :call NumberToggle()<cr>
