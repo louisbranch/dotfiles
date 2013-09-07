@@ -107,11 +107,11 @@ noremap <Right> <NOP>
 " Get rid of search hilighting with ,/
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
+" Fast saving
+nmap <leader>w :w<cr>
+
 " Sudo save
 cmap w!! w !sudo tee % >/dev/null
-
-" TaskList
-map <leader>l <Plug>TaskList
 
 " FuzzyFinder
 nnoremap <silent> <leader>f :FufFile **/<CR>
@@ -131,3 +131,13 @@ function! NumberToggle()
   endif
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
+
+" Toggle Spellcheck
+nnoremap <silent> <leader>ss :setlocal spell!<cr>
+
+" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+map <space> /
+map <c-space> ?
+
+" Insert ; at the end of the line
+inoremap ;; <End>;<Esc>
