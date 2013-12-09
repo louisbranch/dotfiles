@@ -1,3 +1,19 @@
 Host cacau
   HostName cacau.sfarm1.com
   User deploy
+
+Host goiaba
+  HostName goiaba.sfarm1.com
+  User deploy
+
+Host s1
+  HostName s1.replaygaming.com
+  User deploy
+
+Host s2
+  HostName s2.replaygaming.com
+  User deploy
+
+Host s3
+  HostName s3.replaygaming.com
+  User deploy
