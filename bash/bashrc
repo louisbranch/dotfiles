@@ -21,3 +21,4 @@ export PROMPT_COMMAND="history -a; history -n"
 source /home/luiz/work/replaypoker/ec2/env
 export JAVA_HOME=/opt/java/jre
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

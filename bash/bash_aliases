@@ -28,6 +28,9 @@ gbd() { # Delete branch local and remote
 gri() { # Git rebase interactively last n commits
   git rebase -i HEAD~$1
 }
+gpn() { # Push new branch
+  git push --set-upstream origin $1
+}
 
 #Projects
 alias rp='cd ~/code/replaypoker'
@@ -38,7 +41,14 @@ poker() {
   rails runner "RP2Server.start($1)"
 }
 restart() {
-  bundle exec rake $1 rp2server:restart
+  bundle exec rake $1 rp2server:deploy
+}
+startstaging () {
+  ssh deploy@cacau.sfarm1.com ec2/staging.sh $1 start
+}
+
+stopstaging () {
+  ssh deploy@cacau.sfarm1.com ec2/staging.sh $1 stop
 }
 
 #Rails
