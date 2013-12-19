@@ -143,6 +143,9 @@ map <c-space> ?
 inoremap ;; <End>;<Esc>
 
 autocmd FileType erlang
+      \ set tabstop=4 |
+      \ set softtabstop=4 |
+      \ set shiftwidth=4 |
       \ set foldmethod=expr |
       \ set foldexpr=getline(v:lnum)=~'^\\s*%' |
       \ exec "normal zM``"
