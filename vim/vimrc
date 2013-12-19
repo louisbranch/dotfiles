@@ -141,3 +141,8 @@ map <c-space> ?
 
 " Insert ; at the end of the line
 inoremap ;; <End>;<Esc>
+
+autocmd FileType erlang
+      \ set foldmethod=expr |
+      \ set foldexpr=getline(v:lnum)=~'^\\s*%' |
+      \ exec "normal zM``"
