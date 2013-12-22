@@ -68,6 +68,10 @@ set statusline=%{fugitive#statusline()}\ [%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*C
 " Xoria256 Color Theme
 colorscheme xoria256
 
+" 80 column highlight
+set colorcolumn=81
+highlight ColorColumn ctermbg=235
+
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -118,10 +122,6 @@ nnoremap <silent> <leader>f :FufFile **/<CR>
 hi Pmenu ctermfg=255
 hi Pmenu ctermbg=233
 
-" Saved regex
-" %s/:\(\w\{-}\) =>/\1:/gc  // Find old ruby hash syntax :foo => and replace
-" with foo:
-
 " Switch between absolute and relative numbers
 function! NumberToggle()
   if(&relativenumber == 1)
@@ -142,6 +142,9 @@ map <c-space> ?
 " Insert ; at the end of the line
 inoremap ;; <End>;<Esc>
 
+" Settings for erlang files
+" Tabs with 4 spaces
+" Fold comments automatically
 autocmd FileType erlang
       \ set tabstop=4 |
       \ set softtabstop=4 |
