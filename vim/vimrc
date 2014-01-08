@@ -152,3 +152,7 @@ autocmd FileType erlang
       \ set foldmethod=expr |
       \ set foldexpr=getline(v:lnum)=~'^\\s*%' |
       \ exec "normal zM``"
+
+" Auto lintfy files
+let g:jshint2_save = 1
+let g:jshint2_read = 1
