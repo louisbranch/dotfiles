@@ -1,0 +1,33 @@
+{
+  "node": true,
+  "camelcase": true,
+  "esnext": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "freeze": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "nonew": true,
+  "plusplus": true,
+  "quotmark": "double",
+  "undef": true,
+  "unused": true,
+  "trailing": true,
+  "maxparams": 3,
+  "maxdepth": 2,
+  "maxstatements": 4,
+  "maxlen": 80,
+  "globals": {
+    "assert": true,
+    "after": true,
+    "afterEach": true,
+    "before": true,
+    "beforeEach": true,
+    "describe": true,
+    "it": true,
+    "xit": true
+  }
+}
