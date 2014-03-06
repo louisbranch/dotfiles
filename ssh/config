@@ -1,9 +1,45 @@
 Host cacau
   HostName cacau.sfarm1.com
   User deploy
+  ForwardAgent yes
+  ControlMaster auto
+  ControlPath ~/.ssh/master-%r@%h:%p
+  ControlPersist 5m
+
+Host uva
+  HostName uva.sfarm1.com
+  User deploy
+  ForwardAgent yes
+  ControlMaster auto
+  ControlPath ~/.ssh/master-%r@%h:%p
+  ControlPersist 5m
+
+Host acai
+  HostName acai.sfarm1.com
+  User deploy
+  ForwardAgent yes
+  ControlMaster auto
+  ControlPath ~/.ssh/master-%r@%h:%p
+  ControlPersist 5m
+
+Host melancia
+  HostName melancia.sfarm1.com
+  User deploy
+  ForwardAgent yes
+  ControlMaster auto
+  ControlPath ~/.ssh/master-%r@%h:%p
+  ControlPersist 5m
 
 Host goiaba
   HostName goiaba.sfarm1.com
+  User deploy
+
+Host mango
+  HostName mango.sfarm1.com
+  User deploy
+
+Host cable
+  HostName cable.sfarm1.com
   User deploy
 
 Host s1

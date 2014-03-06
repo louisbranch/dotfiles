@@ -154,5 +154,5 @@ autocmd FileType erlang
       \ exec "normal zM``"
 
 " Auto lintfy files
-let g:jshint2_save = 1
-let g:jshint2_read = 1
+" let g:jshint2_save = 1
+" let g:jshint2_read = 1
