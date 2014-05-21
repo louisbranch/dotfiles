@@ -1,4 +1,4 @@
-alias vi='vim'
+alias vi='nvim'
 
 #System
 alias off='poweroff'
@@ -26,7 +26,7 @@ gbd() { # Delete branch local and remote
   git branch -d $1 && git push origin :$1
 }
 gri() { # Git rebase interactively last n commits
-  git rebase -i HEAD~$1
+  git rebase -i HEAD~$1 && git commit --amend --reset-author
 }
 gpn() { # Push new branch
   git push --set-upstream origin $1
@@ -34,19 +34,12 @@ gpn() { # Push new branch
 
 #Projects
 alias rp='cd ~/code/replaypoker'
-deploy() { # Deploy to remote machines
-  bundle exec rake $1 deploy
-}
 poker() {
   rails runner "RP2Server.start($1)"
-}
-restart() {
-  bundle exec rake $1 rp2server:deploy
 }
 startstaging () {
   ssh deploy@cacau.sfarm1.com ec2/staging.sh $1 start
 }
-
 stopstaging () {
   ssh deploy@cacau.sfarm1.com ec2/staging.sh $1 stop
 }

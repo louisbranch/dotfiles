@@ -85,10 +85,6 @@ vnoremap : ;
 " Map to open files in the same directory as the current file
 noremap <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 
-" MiniBuffExplorer configs
-let g:miniBufExplMapWindowNavVim = 1    " control + the vim direction keys[hjkl] can be made to move you between windows.
-let g:miniBufExplStatusLineText = ''
-
 " Indent Tabs configuration
 let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=234
@@ -156,3 +152,15 @@ autocmd FileType erlang
 " Auto lintfy files
 " let g:jshint2_save = 1
 " let g:jshint2_read = 1
+
+let g:airline_theme="luna"
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#buffer_nr_show=1
+let g:airline#extensions#tabline#fnamecollapse=1
+let g:airline#extensions#tabline#show_tab_type=0
+let g:airline_section_c=""
+let g:airline_section_x=""
+let g:airline_section_y=""
+let g:airline_section_z=""
+let g:airline_left_sep=''
+let g:airline_right_sep=''

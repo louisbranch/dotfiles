@@ -50,19 +50,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
-
-# change container layout (stacked, tabbed, default)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout default
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -152,9 +141,7 @@ workspace 2 output DVI-I-1
 exec --no-startup-id feh --bg-max --no-xinerama ~/Dropbox/bg.jpg
 
 # Disable titlebar for applications
-for_window [class="^Chromium$"] border none
-for_window [instance="shell"] border none
-for_window [instance="^HipChat"] border none
+new_window none
 
 # Custom Keybinds
 bindsym XF86HomePage exec chromium
@@ -163,4 +150,4 @@ bindsym XF86AudioLowerVolume exec amixer -q set Master 5dB- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # Launch programs
-exec --no-startup-id i3-msg 'workspace 2; exec chromium; workspace 1; exec urxvtc -name shell;'
+exec --no-startup-id i3-msg 'workspace 2; exec chromium; workspace 1; exec urxvtc;'
