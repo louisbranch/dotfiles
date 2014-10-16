@@ -38,3 +38,5 @@
 
 [ghi]
 	token = e16f5082b8db203f8cd3620c76413ff3f3a45e90
+[gh]
+	autoUpdate = always

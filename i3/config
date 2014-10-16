@@ -134,11 +134,11 @@ bar {
 
 # Set dual monitors layout
 #exec xrandr --output DVI-I-0 --auto --right-of DVI-D-0
-workspace 1 output HDMI-0
-workspace 2 output DVI-I-1
+# workspace 1 output HDMI-0
+# workspace 2 output DVI-I-1
 
 # Set background image
-exec --no-startup-id feh --bg-max --no-xinerama ~/Dropbox/bg.jpg
+exec --no-startup-id feh --bg-max --no-xinerama ~/bg.jpg
 
 # Disable titlebar for applications
 new_window none
