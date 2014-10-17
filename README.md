@@ -2,30 +2,27 @@
 
 ## X
 
-    ln -s ~/dotfiles/x/Xdefaults ~/.Xdefaults
-    ln -s ~/dotfiles/x/xinitrc ~/.xinitrc
+    ln -s ~/code/dotfiles/x/Xdefaults ~/.Xdefaults
+    ln -s ~/code/dotfiles/x/xinitrc ~/.xinitrc
 
 ## bash
 
-    ln -s ~/dotfiles/bash/bashrc ~/.bashrc
-    ln -s ~/dotfiles/bash/bash_profile ~/.bash_profile
-    ln -s ~/dotfiles/bash/bash_aliases ~/.bash_aliases
+    ln -s ~/code/dotfiles/bash/bashrc ~/.bashrc
+    ln -s ~/code/dotfiles/bash/bash_profile ~/.bash_profile
+    ln -s ~/code/dotfiles/bash/bash_aliases ~/.bash_aliases
 
 ## git
 
-    ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+    ln -s ~/code/dotfiles/git/gitconfig ~/.gitconfig
 
-## tmux and tmuxinator
+## tmux
 
-    ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
-
-    gem install tmuxinator
-    ln -s ~/dotfiles/tmux/tmuxinator ~/.tmuxinator
+    ln -s ~/code/dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 ## vim
 
-    ln -s ~/dotfiles/vim/vimrc ~/.vimrc
-    ln -s ~/dotfiles/vim ~/.vim
+    ln -s ~/code/dotfiles/vim/vimrc ~/.vimrc
+    ln -s ~/code/dotfiles/vim ~/.vim
 
 ### Adding other Plugins
 
