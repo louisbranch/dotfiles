@@ -1,4 +1,4 @@
-alias vi='nvim'
+alias vi='vim'
 
 #System
 alias off='poweroff'

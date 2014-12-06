@@ -17,9 +17,8 @@ xset b off >&/dev/null
 # Appends cmd to bash history and reload it
 export PROMPT_COMMAND="history -a; history -n"
 
-# EC2 Commands
-source /home/luiz/work/replaypoker/ec2/env
-export JAVA_HOME=/opt/java/jre
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$GOPATH/bin # Add GO
+
+export NVM_DIR="/home/luiz/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
