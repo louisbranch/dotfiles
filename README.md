@@ -16,6 +16,7 @@
 ## git
 
     ln -s ~/code/dotfiles/git/gitconfig ~/.gitconfig
+    ln -s ~/code/dotfiles/git/gitignore_global ~/.gitignore_global
 
 ## tmux
 

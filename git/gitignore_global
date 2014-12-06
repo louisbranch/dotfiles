@@ -1,0 +1,5 @@
+.gtt
+*.swp
+node_modules
+.pryrc
+*.out
