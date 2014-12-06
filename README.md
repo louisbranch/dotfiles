@@ -13,6 +13,10 @@
     ln -s ~/code/dotfiles/bash/bash_aliases ~/.bash_aliases
     ln -s ~/code/dotfiles/bash/bash_prompt ~/.bash_prompt
 
+## ssh
+
+    ln -s ~/code/dotfiles/ssh/config ~/.ssh/config
+
 ## git
 
     ln -s ~/code/dotfiles/git/gitconfig ~/.gitconfig
