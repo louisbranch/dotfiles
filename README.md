@@ -13,6 +13,15 @@
     ln -s ~/code/dotfiles/bash/bash_aliases ~/.bash_aliases
     ln -s ~/code/dotfiles/bash/bash_prompt ~/.bash_prompt
 
+## i3
+
+    ln -s ~/code/dotfiles/i3/config ~/.i3/config
+    ln -s ~/code/dotfiles/i3/i3status.conf ~/.i3status.conf
+
+## ack
+
+    ln -s ~/code/dotfiles/ack/ackrc ~/.ackrc
+
 ## ssh
 
     ln -s ~/code/dotfiles/ssh/config ~/.ssh/config
@@ -25,6 +34,10 @@
 ## tmux
 
     ln -s ~/code/dotfiles/tmux/tmux.conf ~/.tmux.conf
+
+## js
+
+    ln -s ~/code/js/jshintrc ~/.jshintrc
 
 ## vim
 
