@@ -52,3 +52,7 @@
 
     git submodule init
     git submodule update
+
+## Other Configurations
+
+* Disable terminal beep: [Arch Wiki](https://wiki.archlinux.org/index.php/Disable_PC_speaker_beep#Globally)

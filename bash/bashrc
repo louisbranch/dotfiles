@@ -10,9 +10,6 @@ if [[ ! $TERM =~ screen ]]; then
   exec tmux
 fi
 
-# Mute terminal beeps
-xset b off >&/dev/null
-
 # Bash history across tmux sessions
 # Appends cmd to bash history and reload it
 export PROMPT_COMMAND="history -a; history -n"
