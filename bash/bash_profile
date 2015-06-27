@@ -6,6 +6,7 @@
 
 # GO path
 export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # Set additional configs for git
 source /usr/share/git/completion/git-completion.bash

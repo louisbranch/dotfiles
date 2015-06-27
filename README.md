@@ -12,6 +12,7 @@
     ln -s ~/code/dotfiles/bash/bash_profile ~/.bash_profile
     ln -s ~/code/dotfiles/bash/bash_aliases ~/.bash_aliases
     ln -s ~/code/dotfiles/bash/bash_prompt ~/.bash_prompt
+    ln -s ~/code/dotfiles/bash/inputrc ~/.inputrc
 
 ## i3
 
@@ -43,6 +44,9 @@
 
     ln -s ~/code/dotfiles/vim/vimrc ~/.vimrc
     ln -s ~/code/dotfiles/vim ~/.vim
+
+# misc
+    ln -s ~/code/dotfiles/misc/user-dirs.dirs ~/.config/user-dirs.dirs
 
 ### Adding other Plugins
 

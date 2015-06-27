@@ -118,3 +118,6 @@
 [submodule "vim/bundle/vim-syntax-extra"]
 	path = vim/bundle/vim-syntax-extra
 	url = https://github.com/justinmk/vim-syntax-extra
+[submodule "vim/bundle/vim-go"]
+	path = vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go
