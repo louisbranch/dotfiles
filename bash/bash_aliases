@@ -1,3 +1,4 @@
+#Programs
 alias vi='vim'
 
 #System
@@ -44,19 +45,9 @@ stopstaging () {
   ssh deploy@cacau.sfarm1.com ec2/staging.sh $1 stop
 }
 
-#Rails
-alias migrate='bundle exec rake db:migrate && bundle exec rake db:test:prepare'
-
 #Transmission
 alias pirateon='sudo systemctl start transmission'
 alias pirateoff='sudo systemctl stop transmission'
 
 #Pacman
 alias update='sudo pacman -Syyu'
-
-#Dart
-alias dartium="DART_FLAGS='--enable_type_checks --enable_asserts' ~/bin/dartium/chrome"
-
-#Utils
-alias network="sudo nmap -sP -n 192.168.0.0/24" # Scan remote machines on local network
-alias node="env NODE_NO_READLINE=1 rlwrap node" # requires rlwrap
