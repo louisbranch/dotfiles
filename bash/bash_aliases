@@ -1,5 +1,6 @@
 #Programs
 alias vi='vim'
+alias open='xdg-open'
 
 #System
 alias off='poweroff'
