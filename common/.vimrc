@@ -1,6 +1,3 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim " Load Pathogen from bundle
-call pathogen#infect()            " Pathogen start
-
 set nocompatible                  " Must come first because it changes other options.
 
 syntax enable                     " Turn on syntax highlighting.
@@ -62,15 +59,13 @@ set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 
 set laststatus=2                  " Show the status line all the time
-" Useful status information at bottom of screen
-set statusline=%{fugitive#statusline()}\ [%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " Xoria256 Color Theme
 colorscheme xoria256
 
 " 80 column highlight
-set colorcolumn=81
-highlight ColorColumn ctermbg=235
+set textwidth=80
+set colorcolumn=+1
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -85,19 +80,6 @@ vnoremap : ;
 " Map to open files in the same directory as the current file
 noremap <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 
-" Indent Tabs configuration
-let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd  ctermbg=234
-hi IndentGuidesEven ctermbg=233
-autocmd VimEnter * :IndentGuidesEnable
-
-" Highligh json as javascript
-autocmd BufNewFile,BufRead *.json set ft=javascript
-
-" Auto open QuickFix
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
-
 " Disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -107,16 +89,8 @@ noremap <Right> <NOP>
 " Get rid of search hilighting with ,/
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
-" Fast saving
-nmap <leader>w :w<cr>
-
 " Sudo save
 cmap w!! w !sudo tee % >/dev/null
-
-" FuzzyFinder
-nnoremap <silent> <leader>f :FufFile **/<CR>
-hi Pmenu ctermfg=255
-hi Pmenu ctermbg=233
 
 " Switch between absolute and relative numbers
 function! NumberToggle()
@@ -135,23 +109,17 @@ nnoremap <silent> <leader>ss :setlocal spell!<cr>
 map <space> /
 map <c-space> ?
 
-" Insert ; at the end of the line
-inoremap ;; <End>;<Esc>
+" Plugins
+call plug#begin('~/.vim/plugged')
 
-" Settings for erlang files
-" Tabs with 4 spaces
-" Fold comments automatically
-autocmd FileType erlang
-      \ set tabstop=4 |
-      \ set softtabstop=4 |
-      \ set shiftwidth=4 |
-      \ set foldmethod=expr |
-      \ set foldexpr=getline(v:lnum)=~'^\\s*%' |
-      \ exec "normal zM``"
+Plug 'bling/vim-airline'
+Plug 'fatih/vim-go'
+Plug 'godlygeek/tabular'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
-" Auto lintfy files
-" let g:jshint2_save = 1
-" let g:jshint2_read = 1
+call plug#end()
 
 let g:airline_theme="luna"
 let g:airline#extensions#tabline#enabled=1
@@ -164,9 +132,6 @@ let g:airline_section_y=""
 let g:airline_section_z=""
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-
-" Auto make C++ files on save
-autocmd BufWritePost,FileWritePost *.cpp silent make! | redraw!
 
 " Vim Go
 let g:go_fmt_command = "goimports"
