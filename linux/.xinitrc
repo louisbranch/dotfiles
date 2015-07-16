@@ -21,6 +21,3 @@ xset fp rehash
 
 # Disable system beep
 xset -b
-
-# Start Dropbox daemon
-dropboxd
