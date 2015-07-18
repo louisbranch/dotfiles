@@ -1,7 +1,10 @@
 # dotfiles
 
-Install [GNU/Stow](https://www.gnu.org/software/stow/)
+On Linux:
 
+    sudo pacman -S stow git
+    git clone git@github.com:luizbranco/dotfiles.git ~/dotfiles
+    cd ~/dotfiles
     stow common
     stow linux
 
