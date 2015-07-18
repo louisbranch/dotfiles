@@ -113,9 +113,16 @@ map <c-space> ?
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
+Plug 'garbas/vim-snipmate'
+Plug 'garbas/vim-snipmate'
 Plug 'godlygeek/tabular'
+Plug 'honza/vim-snippets'
+Plug 'marcWeber/vim-addon-mw-utils'
 Plug 'mileszs/ack.vim'
+Plug 'raimondi/delimitMate'
+Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
@@ -146,3 +153,7 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>v <Plug>(go-vet)
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
