@@ -46,9 +46,5 @@ stopstaging () {
   ssh deploy@cacau.sfarm1.com ec2/staging.sh $1 stop
 }
 
-#Transmission
-alias pirateon='sudo systemctl start transmission'
-alias pirateoff='sudo systemctl stop transmission'
-
 #Pacman
 alias update='sudo pacman -Syyu'
