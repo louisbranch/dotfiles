@@ -21,7 +21,7 @@
 
 URxvt.scrollBar:            false
 URxvt.font:                 xft:terminus:size=20
-URxvt.termName:             screen-256color
+#URxvt.termName:            screen-256color
 URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,fullscreen
 URxvt.url-select.launcher:  chromium
 URxvt.url-select.underline: true
