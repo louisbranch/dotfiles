@@ -47,4 +47,4 @@ stopstaging () {
 }
 
 #Pacman
-alias update='sudo pacman -Syyu'
+alias installed='comm -23 <((pacman -Qqe) | sort) <((pacman -Qqg base base-devel) | sort)'
