@@ -34,5 +34,3 @@ Color = always
 #MaxThreads =
 
 # vim: set noet syn=conf
-
-Sort = votes
