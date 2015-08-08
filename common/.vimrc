@@ -63,9 +63,8 @@ set laststatus=2                  " Show the status line all the time
 " Xoria256 Color Theme
 colorscheme xoria256
 
-" 80 column highlight
-set textwidth=80
-set colorcolumn=+1
+" 81 column highlight
+set colorcolumn=81
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
