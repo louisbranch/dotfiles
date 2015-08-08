@@ -1,0 +1,11 @@
+[Unit]
+Description=Find current public ip and store into a file
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/bash -c "curl ifconfig.me > $HOME/sync/$USER@$HOSTNAME"
+
+[Install]
+WantedBy=default.target
