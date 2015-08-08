@@ -161,7 +161,7 @@ new_window none
 exec --no-startup-id feh --bg-scale --no-xinerama ~/.bg.png
 
 # Custom Keybinds
-bindsym XF86HomePage exec google-chrome-unstable
+bindsym XF86HomePage exec google-chrome-stable
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5dB- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
