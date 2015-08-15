@@ -158,7 +158,7 @@ bar {
 new_window none
 
 # Set background image
-exec --no-startup-id feh --bg-scale --no-xinerama ~/.bg.png
+exec --no-startup-id feh --bg-fill --no-xinerama ~/.bg.png
 
 # Custom Keybinds
 bindsym XF86HomePage exec google-chrome-stable
