@@ -124,6 +124,7 @@ Plug 'raimondi/delimitMate'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'
 
 call plug#end()
 
@@ -139,7 +140,20 @@ let g:airline_section_z=""
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_compiler_options = '-std=c++11'
+
 " Vim Go
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
