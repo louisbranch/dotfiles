@@ -60,9 +60,6 @@ set expandtab                    " Use spaces instead of tabs
 
 set laststatus=2                  " Show the status line all the time
 
-" Xoria256 Color Theme
-colorscheme xoria256
-
 " 81 column highlight
 set colorcolumn=81
 
@@ -125,6 +122,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -170,3 +168,8 @@ au FileType go nmap <leader>v <Plug>(go-vet)
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Base16 Theme
+set background=dark
+let base16colorspace=256  " Access colors present in 256 colorspace"
+colorscheme base16-twilight

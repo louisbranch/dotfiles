@@ -16,3 +16,7 @@ for file in ~/.{extra,bash_prompt,exports,bash_aliases,functions}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-twilight.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
