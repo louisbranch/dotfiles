@@ -165,6 +165,9 @@ bindsym XF86HomePage exec google-chrome-stable
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5dB- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86AudioNext exec cmus-remote -n
+bindsym XF86AudioPlay exec cmus-remote -u
+bindsym XF86AudioPrev exec cmus-remote -r
 
 # Create Log out, Reboot, Poweroff bindings
 mode "Exit (L)ogout, (R)eboot, (P)oweroff" {
