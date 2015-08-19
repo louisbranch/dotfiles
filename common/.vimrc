@@ -123,6 +123,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'chriskempson/base16-vim'
+Plug 't-yuki/vim-go-coverlay'
 
 call plug#end()
 
@@ -151,7 +152,7 @@ let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler_options = '-std=c++11'
 
 " Vim Go
-let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+let g:syntastic_go_checkers = ["golint", "govet"]
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -164,6 +165,9 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>v <Plug>(go-vet)
+au FileType go nmap <leader>c <Plug>(go-coverlay)
+au FileType go nmap <leader>C <Plug>(go-clearlay)
+au BufWritePost *.go call go#coverlay#Coverlay()
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
