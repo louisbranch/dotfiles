@@ -36,6 +36,7 @@ gpn() { # Push new branch
 
 #Projects
 alias rp='cd ~/code/replaypoker'
+alias work='sudo systemctl start mysqld redis rabbitmq'
 poker() {
   rails runner "RP2Server.start($1)"
 }
