@@ -178,3 +178,6 @@ let g:ctrlp_cmd = 'CtrlP'
 set background=dark
 let base16colorspace=256  " Access colors present in 256 colorspace"
 colorscheme base16-twilight
+
+" Wrap lines and spell check for markdown files
+au BufRead,BufNewFile *.md setlocal textwidth=80 spell spelllang=en_us
