@@ -2,9 +2,6 @@
 
 export EDITOR=vim
 
-# Start ssh-agent
-eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
-
 # Starts tmux
 if [[ ! $TERM =~ screen ]]; then
   exec tmux
