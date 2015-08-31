@@ -109,6 +109,7 @@ map <c-space> ?
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
+Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
 Plug 'garbas/vim-snipmate'
@@ -117,13 +118,13 @@ Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
 Plug 'marcWeber/vim-addon-mw-utils'
 Plug 'mileszs/ack.vim'
+Plug 'qpkorr/vim-renamer'
 Plug 'raimondi/delimitMate'
+Plug 'scrooloose/syntastic'
+Plug 't-yuki/vim-go-coverlay'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/syntastic'
-Plug 'chriskempson/base16-vim'
-Plug 't-yuki/vim-go-coverlay'
 
 call plug#end()
 
