@@ -23,5 +23,13 @@ xset dpms 0 0 0
 eval `ssh-agent`
 ssh-add ~/.ssh/id_rsa
 
-# Starts i3 tile window manager
+# start some nice programs
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+    for f in /etc/X11/xinit/xinitrc.d/?* ; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset f
+fi
+
+# start i3 tile window manager
 exec i3
