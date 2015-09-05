@@ -1,3 +1,5 @@
+set editor='vim + -c "setlocal wrapmargin=0 textwidth=0 wrap nocp linebreak nohlsearch"'
+
 set folder         = imaps://imap.gmail.com/
 set imap_user      = luiz@replaypoker.com
 set spoolfile      = +INBOX
@@ -6,6 +8,7 @@ unset imap_passive
 set imap_keepalive = 300
 set mail_check     = 120
 set header_cache   = ~/.cache/mutt
+set text_flowed    = yes
 
 #SMTP
 unset record
