@@ -1,6 +1,7 @@
 #Programs
 alias vi='vim'
 alias open='xdg-open'
+alias ctrlc='xclip -se c'
 
 #System
 alias off='poweroff'

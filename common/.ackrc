@@ -1,3 +1,4 @@
 --ignore-dir=log
+--ignore-dir=logs
 --ignore-dir=node_modules
 --ignore-file=is:.gtt
