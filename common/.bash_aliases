@@ -50,3 +50,11 @@ stopstaging () {
 
 #Pacman
 alias installed='comm -23 <((pacman -Qqe) | sort) <((pacman -Qqg base base-devel) | sort)'
+
+#Tmux
+tn() { # new named session
+  tmux new -s $1
+}
+ta() { # attach ession
+  tmux attach -t $1
+}
