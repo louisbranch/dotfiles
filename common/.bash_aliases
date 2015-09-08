@@ -53,8 +53,18 @@ alias installed='comm -23 <((pacman -Qqe) | sort) <((pacman -Qqg base base-devel
 
 #Tmux
 tn() { # new named session
-  tmux new -s $1
+  if [ -z "$1" ]
+  then
+    tmux new
+  else
+    tmux new -s $1
+  fi
 }
 ta() { # attach ession
-  tmux attach -t $1
+  if [ -z "$1" ]
+  then
+    tmux attach
+  else
+    tmux attach -t $1
+  fi
 }
