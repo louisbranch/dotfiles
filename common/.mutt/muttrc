@@ -1,5 +1,8 @@
+# general
 set editor='vim + -c "setlocal wrapmargin=0 textwidth=0 wrap nocp linebreak nohlsearch"'
+alternative_order text/plain text/html
 
+# IMAP
 set folder         = imaps://imap.gmail.com/
 set imap_user      = luiz@replaypoker.com
 set spoolfile      = +INBOX
@@ -10,13 +13,15 @@ set mail_check     = 120
 set header_cache   = ~/.cache/mutt
 set text_flowed    = yes
 
-#SMTP
+# SMTP
 unset record
 set smtp_url       = smtps://$imap_user@smtp.gmail.com:465/
 set ssl_starttls   = yes
 set ssl_force_tls  = yes
 
-alternative_order text/plain text/html
+# lists
+subscribe team@replaypoker.com
+subscribe tech@replaypoker.com
 
 # Colors
 # vim: filetype=muttrc
