@@ -19,6 +19,11 @@
   #Only Push Upstream for the Current Branch
   default = upstream
 
+[log]
+    date = relative
+[format]
+    pretty = format:%h\t%Cblue%ad%Creset\t%an\t%Cgreen%s%Creset
+
 [alias]
   ci = commit
   co = checkout
