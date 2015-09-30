@@ -73,9 +73,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -84,7 +84,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -162,12 +162,15 @@ exec --no-startup-id feh --bg-fill --no-xinerama ~/.bg.png
 
 # Custom Keybinds
 bindsym XF86HomePage exec google-chrome-stable
+bindsym XF86TouchpadToggle exec google-chrome-stable
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5dB- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
-bindsym XF86AudioNext exec cmus-remote -n
-bindsym XF86AudioPlay exec cmus-remote -u
-bindsym XF86AudioPrev exec cmus-remote -r
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioPrev exec mpc prev
+bindsym Control+XF86AudioRaiseVolume exec mpc next
+bindsym Control+XF86AudioLowerVolume exec mpc prev
 
 # Create Log out, Reboot, Poweroff bindings
 mode "Exit (L)ogout, (R)eboot, (P)oweroff" {
