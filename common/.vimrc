@@ -113,7 +113,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
 Plug 'garbas/vim-snipmate'
-Plug 'garbas/vim-snipmate'
+Plug 'garyburd/go-explorer'
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
 Plug 'marcWeber/vim-addon-mw-utils'
@@ -151,9 +151,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler_options = '-std=c++11'
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["go"] }
 
 " Vim Go
-let g:syntastic_go_checkers = ["golint", "govet"]
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1

@@ -7,9 +7,10 @@ alias ctrlc='xclip -se c'
 alias off='poweroff'
 
 #Shell
-alias ls='ls --color'
+alias ls='ls -h --color --group-directories-first'
 alias tree='tree -L 2'
 alias q='exit'
+alias please='sudo $(fc -ln -1)'
 
 #Git
 alias gs='git status'
