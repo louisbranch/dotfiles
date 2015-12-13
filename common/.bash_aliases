@@ -8,9 +8,15 @@ alias off='poweroff'
 
 #Shell
 alias ls='ls -h --color --group-directories-first'
+alias ll='ls --color -al --group-directories-first'
 alias tree='tree -L 2'
 alias q='exit'
 alias please='sudo $(fc -ln -1)'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ps?='ps aux | grep'
+alias ping='ping -c4'
+mcd() { mkdir -p "$1"; cd "$1";}
 
 #Git
 alias gs='git status'
