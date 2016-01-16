@@ -1,5 +1,6 @@
 # Ruby Version Manager
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+source /usr/share/chruby/chruby.sh
+source /usr/share/chruby/auto.sh
 
 # Node Version Manager
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
