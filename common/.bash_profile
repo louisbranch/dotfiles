@@ -9,6 +9,8 @@ source /usr/share/chruby/auto.sh
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+export CDPATH=:$GOPATH/src/github.com/luizbranco/
+
 # Set additional configs for git
 source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
