@@ -15,7 +15,7 @@ export CDPATH=:$GOPATH/src/github.com/luizbranco/
 source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
 
-for file in ~/.{extra,bash_prompt,exports,bash_aliases,functions}; do
+for file in ~/.{extra,bash_prompt,exports,bash_aliases,mitrerc,functions}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
