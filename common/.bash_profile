@@ -1,9 +1,10 @@
 # Ruby Version Manager
-source /usr/share/chruby/chruby.sh
-source /usr/share/chruby/auto.sh
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 # Node Version Manager
-[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
+export NVM_DIR="/home/luiz/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # GO path
 export GOPATH=$HOME/go
@@ -15,10 +16,14 @@ export CDPATH=:$GOPATH/src/github.com/luizbranco/
 source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
 
-for file in ~/.{extra,bash_prompt,exports,bash_aliases,mitrerc,functions}; do
+# Work Work
+export MITRE_WORKSPACE=$HOME/code
+
+for file in $HOME/.{extra,bash_prompt,exports,bash_aliases,mitrerc,functions}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
+export CDPATH=$CDPATH:$GOPATH/src/github.com/mitremedia
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-twilight.dark.sh"
