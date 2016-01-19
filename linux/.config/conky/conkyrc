@@ -8,4 +8,5 @@ use_spacer none
 TEXT
 ${if_match "${mpd_status}" == "Playing"}♫ ${mpd_artist} - ${mpd_title} | ${endif}\
 ♪ ${exec amixer get Master -c 0 -M | grep -oE "[[:digit:]]*%"} \
+| +/- ${battery_percent}% \
 | ${time %d/%m %I:%M%P}
