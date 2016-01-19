@@ -1,5 +1,5 @@
 #Programs
-alias vi='vim'
+alias vi='nvim'
 alias open='xdg-open'
 alias ctrlc='xclip -se c'
 alias music='ncmpdcpp'
