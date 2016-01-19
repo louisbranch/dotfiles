@@ -3,7 +3,7 @@
 	name = Luiz Branco
 
 [core]
-  editor = vim
+  editor = nvim
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
 
