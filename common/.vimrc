@@ -120,7 +120,7 @@ Plug 'marcWeber/vim-addon-mw-utils'
 Plug 'mileszs/ack.vim'
 Plug 'qpkorr/vim-renamer'
 Plug 'raimondi/delimitMate'
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
 Plug 't-yuki/vim-go-coverlay'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
@@ -154,7 +154,7 @@ let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = {
     \ "mode": "active",
-    \ "passive_filetypes": ["go", "haml"] }
+    \ "passive_filetypes": ["haml"] }
 
 " Vim Go
 let g:go_fmt_command = "goimports"
@@ -176,7 +176,7 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>v <Plug>(go-vet)
 "au FileType go nmap <leader>c <Plug>(go-coverlay)
 au FileType go nmap <leader>C <Plug>(go-clearlay)
-au BufWritePost *.go call go#coverlay#Coverlay()
+au BufWritePost *.go :GoTest
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
