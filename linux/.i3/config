@@ -90,17 +90,16 @@ bindsym $mod+space focus mode_toggle
 #bindsym $mod+d focus child
 
 # customize workspace names
-set $WS1 1:●
-set $WS2 2:●
-set $WS3 3:●
-set $WS4 4:●
-set $WS5 5:●
-set $WS6 6:●
-set $WS7 7:●
-set $WS8 8:●
-set $WS9 9:●
-set $WS10 10:●
-
+set $WS1 1:1
+set $WS2 2:2
+set $WS3 3:3
+set $WS4 4:4
+set $WS5 5:5
+set $WS6 6:6
+set $WS7 7:7
+set $WS8 8:8
+set $WS9 9:9
+set $WS10 10:10
 
 # switch to workspace
 bindsym Mod4+1 workspace $WS1
@@ -179,9 +178,6 @@ bar {
 # Remove title and border
 new_window none
 
-# Set background image
-exec --no-startup-id feh --bg-fill --no-xinerama ~/.bg.png
-
 # Custom Keybinds
 bindsym XF86HomePage exec google-chrome-stable
 bindsym XF86TouchpadToggle exec google-chrome-stable
@@ -195,9 +191,10 @@ bindsym Control+XF86AudioRaiseVolume exec mpc next
 bindsym Control+XF86AudioLowerVolume exec mpc prev
 
 # Create Log out, Reboot, Poweroff bindings
-mode "Exit (L)ogout, (R)eboot, (P)oweroff" {
+mode "(L)ock, (E)xit, (R)eboot, (P)oweroff" {
+  bindsym $mod+l exec i3lock -c 000000
+  bindsym $mod+e exit
   bindsym $mod+r exec systemctl reboot
-  bindsym $mod+l exit
   bindsym $mod+p exec systemctl poweroff
 
 # back to normal: Enter or Escape
@@ -205,4 +202,8 @@ mode "Exit (L)ogout, (R)eboot, (P)oweroff" {
   bindsym Escape mode "default"
 }
 
-bindsym $mod+Shift+e mode "Exit (L)ogout, (R)eboot, (P)oweroff"
+bindsym $mod+Shift+e mode "(L)ock, (E)xit, (R)eboot, (P)oweroff"
+
+exec --no-startup-id xrandr --output VGA1 --auto --right-of LVDS1
+workspace $WS1 output LVDS1
+workspace $WS2 output VGA1
