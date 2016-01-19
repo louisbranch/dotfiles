@@ -1,8 +1,9 @@
 #Programs
 alias vi='nvim'
+alias vim='nvim'
 alias open='xdg-open'
 alias ctrlc='xclip -se c'
-alias music='ncmpdcpp'
+alias music='ncmpcpp'
 
 #System
 alias off='poweroff'
