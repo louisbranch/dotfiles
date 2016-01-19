@@ -2,6 +2,7 @@
 alias vi='vim'
 alias open='xdg-open'
 alias ctrlc='xclip -se c'
+alias music='ncmpdcpp'
 
 #System
 alias off='poweroff'
@@ -40,19 +41,6 @@ gri() { # Git rebase interactively last n commits
 }
 gpn() { # Push new branch
   git push --set-upstream origin $1
-}
-
-#Projects
-alias rp='cd ~/code/replaypoker'
-alias work='sudo systemctl start mysqld redis rabbitmq'
-poker() {
-  rails runner "RP2Server.start($1)"
-}
-startstaging () {
-  ssh deploy@cacau.sfarm1.com ec2/staging.sh $1 start
-}
-stopstaging () {
-  ssh deploy@cacau.sfarm1.com ec2/staging.sh $1 stop
 }
 
 #Pacman
