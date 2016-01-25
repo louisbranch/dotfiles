@@ -15,6 +15,9 @@
   local = yellow
   remote = green
 
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+
 [push]
   #Only Push Upstream for the Current Branch
   default = upstream

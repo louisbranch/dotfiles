@@ -1,6 +1,8 @@
 # Starts urxvt daemon
 urxvtd -q -o -f
 
+xrdb -merge ~/.Xresources
+
 # Enable custom keys
 if [ -s ~/.Xmodmap ]; then
   xmodmap ~/.Xmodmap

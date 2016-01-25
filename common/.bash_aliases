@@ -7,6 +7,8 @@ alias music='ncmpcpp'
 
 #System
 alias off='poweroff'
+alias eth='sudo systemctl start dhcpcd@enp0s25'
+alias wifi='sudo systemctl start netctl@mitre'
 
 #Shell
 alias ls='ls -h --color --group-directories-first'

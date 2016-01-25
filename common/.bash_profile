@@ -1,6 +1,6 @@
 # Ruby Version Manager
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+source /usr/share/chruby/chruby.sh
+source /usr/share/chruby/auto.sh
 
 # Node Version Manager
 export NVM_DIR="/home/luiz/.nvm"
