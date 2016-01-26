@@ -4,6 +4,7 @@ alias vim='nvim'
 alias open='xdg-open'
 alias ctrlc='xclip -se c'
 alias music='ncmpcpp'
+alias be='bundle exec'
 
 #System
 alias off='poweroff'
