@@ -44,7 +44,7 @@ set title                         " Set the terminal's title
 set visualbell                    " No beeping.
 set noerrorbells                  " No beeping.
 
-set clipboard=unnamed             " Share system clipboard.
+set clipboard=unnamedplus         " Share system clipboard.
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
