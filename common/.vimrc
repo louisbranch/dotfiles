@@ -109,6 +109,7 @@ map <c-space> ?
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
