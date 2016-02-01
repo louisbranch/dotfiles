@@ -10,6 +10,8 @@ alias be='bundle exec'
 alias off='poweroff'
 alias eth='sudo systemctl start dhcpcd@enp0s25'
 alias wifi='sudo systemctl start netctl@mitre'
+alias sd='sudo systemctl'
+alias sdu='systemctl --user'
 
 #Shell
 alias ls='ls -h --color --group-directories-first'
