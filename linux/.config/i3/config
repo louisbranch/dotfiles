@@ -207,8 +207,8 @@ mode "(L)ock, (E)xit, (R)eboot, (P)oweroff" {
 
 bindsym $mod+Shift+e mode "(L)ock, (E)xit, (R)eboot, (P)oweroff"
 
-exec --no-startup-id xrandr --output eDP-1 --auto --output VGA-1 --auto --right-of eDP-1
-workspace $WS1 output VGA-1
-workspace $WS2 output VGA-1
-workspace $WS3 output eDP-1
-workspace $WS4 output eDP-1
+#exec --no-startup-id xrandr --output eDP-1 --auto --output VGA-1 --auto --right-of eDP-1
+#workspace $WS1 output VGA-1
+#workspace $WS2 output VGA-1
+#workspace $WS3 output eDP-1
+#workspace $WS4 output eDP-1

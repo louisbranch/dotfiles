@@ -127,6 +127,8 @@ Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'garyburd/go-explorer'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -153,7 +155,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler_options = '-std=c++11'
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = {
     \ "mode": "active",
     \ "passive_filetypes": ["haml", "go"] }
@@ -166,6 +167,8 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_auto_type_info = 1
+"let g:go_term_enabled=1
+"let g:go_term_mode = "tab"
 
 "au FileType go nmap <Leader>gd <Plug>(go-doc)
 "au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
@@ -175,11 +178,11 @@ let g:go_auto_type_info = 1
 "au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <Leader>d <Plug>(go-doc-vertical)
 au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>v <Plug>(go-vet)
-au FileType go nmap <Leader>s <Plug>(go-implements)
-au FileType go nmap <Leader>r <Plug>(go-rename)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverlay)
+au FileType go nmap <leader>C <Plug>(go-clearlay)
 au BufWritePost *.go :GoTest
 
 " CtrlP
@@ -193,3 +196,32 @@ colorscheme base16-twilight
 
 " Wrap lines and spell check for markdown files
 au BufRead,BufNewFile *.md setlocal textwidth=80 spell spelllang=en_us
+
+" Tagbar
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
