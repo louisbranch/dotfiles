@@ -5,6 +5,7 @@ alias open='xdg-open'
 alias ctrlc='xclip -se c'
 alias music='ncmpcpp'
 alias be='bundle exec'
+alias spec='find app lib spec -name "*.rb" | entr -c bundle exec rspec --no-profile --tag focus'
 
 #System
 alias off='poweroff'
@@ -40,7 +41,7 @@ gbn() { # New branch from master
   gcm && git checkout -b $1
 }
 gbd() { # Delete branch local and remote
-  git branch -d $1 && git push origin :$1
+  git branch -D $1 && git push origin :$1
 }
 gri() { # Git rebase interactively last n commits
   git rebase -i HEAD~$1 && git commit --amend --reset-author

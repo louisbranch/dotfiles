@@ -23,7 +23,7 @@ for file in $HOME/.{extra,bash_prompt,exports,bash_aliases,mitrerc,functions}; d
   [ -r "$file" ] && source "$file"
 done
 unset file
-export CDPATH=$CDPATH:$GOPATH/src/github.com/mitremedia
+export CDPATH=$CDPATH:$GOPATH/src/github.com/MitreMedia
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-twilight.dark.sh"
