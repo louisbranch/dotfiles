@@ -8,3 +8,4 @@ common/.weechat/python
 common/.weechat/script
 linux/.config/
 linux/.gnupg
+*.log
