@@ -1,0 +1,9 @@
+[Unit]
+Description=Random wallpaper with feh
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c '/usr/bin/feh --bg-fill --randomize --no-fehbg ~/.wallpapers/*'
+
+[Install]
+WantedBy=default.target
