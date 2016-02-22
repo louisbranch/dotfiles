@@ -6,6 +6,7 @@ alias ctrlc='xclip -se c'
 alias music='ncmpcpp'
 alias be='bundle exec'
 alias spec='find app lib spec -name "*.rb" | entr -c bundle exec rspec --no-profile --tag focus'
+alias jspec='find app lib spec -name "*.js" | entr -c mocha --reporter dot spec/javascripts'
 
 #System
 alias off='poweroff'
