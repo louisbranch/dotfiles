@@ -178,6 +178,9 @@ bar {
 # Remove title and border
 new_window none
 
+# browser pop-ups
+for_window [window_role="pop-up"] floating enable
+
 # Custom Keybinds
 bindsym XF86HomePage exec google-chrome-stable
 bindsym XF86TouchpadToggle exec google-chrome-stable
