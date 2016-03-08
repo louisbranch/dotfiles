@@ -61,7 +61,7 @@ set expandtab                    " Use spaces instead of tabs
 set laststatus=2                  " Show the status line all the time
 
 " 81 column highlight
-"set colorcolumn=81
+set colorcolumn=81
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -121,11 +121,12 @@ Plug 'marcWeber/vim-addon-mw-utils'
 Plug 'mileszs/ack.vim'
 Plug 'qpkorr/vim-renamer'
 Plug 'raimondi/delimitMate'
-"Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 Plug 't-yuki/vim-go-coverlay'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'garyburd/go-explorer'
 
 call plug#end()
 
@@ -155,7 +156,7 @@ let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = {
     \ "mode": "active",
-    \ "passive_filetypes": ["haml"] }
+    \ "passive_filetypes": ["haml", "go"] }
 
 " Vim Go
 let g:go_fmt_command = "goimports"
@@ -164,19 +165,21 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_auto_type_info = 1
 
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <leader>r <Plug>(go-run)
+"au FileType go nmap <Leader>gd <Plug>(go-doc)
+"au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+"au FileType go nmap <Leader>ds <Plug>(go-def-split)
+"au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+"au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+"au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <Leader>d <Plug>(go-doc-vertical)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>v <Plug>(go-vet)
-"au FileType go nmap <leader>c <Plug>(go-coverlay)
-au FileType go nmap <leader>C <Plug>(go-clearlay)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>r <Plug>(go-rename)
 au BufWritePost *.go :GoTest
 
 " CtrlP
