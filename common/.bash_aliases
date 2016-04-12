@@ -5,9 +5,10 @@ alias open='xdg-open'
 alias ctrlc='xclip -se c'
 alias music='ncmpcpp'
 alias be='bundle exec'
-alias spec='find app lib spec -name "*.rb" | entr -c bundle exec rspec --no-profile --tag focus'
+alias spec='RUBYOPT=W0 find app lib spec -name "*.rb" | entr -c bundle exec rspec --no-profile --tag focus'
 alias jspec='find app lib spec -name "*.js" | entr -c mocha --reporter dot spec/javascripts'
 alias plex='sudo systemctl start plexmediaserver'
+alias vpnny='sudo openvpn --config /etc/openvpn/US_New_York_City.conf'
 
 #System
 alias off='poweroff'
@@ -46,10 +47,10 @@ gbd() { # Delete branch local and remote
   git branch -D $1 && git push origin :$1
 }
 gri() { # Git rebase interactively last n commits
-  git rebase -i HEAD~$1 && git commit --amend --reset-author
+  git rebase -i HEAD~$1
 }
 gpn() { # Push new branch
-  git push --set-upstream origin $1
+  git push -u
 }
 
 #Pacman
@@ -71,4 +72,9 @@ ta() { # attach ession
   else
     tmux attach -t $1
   fi
+}
+
+# Search and Replace
+ackr() {
+  ack $1 -l --print0 | xargs -0 -n 1 sed -i "s/$1/$2/g"
 }

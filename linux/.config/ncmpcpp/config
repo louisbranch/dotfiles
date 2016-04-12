@@ -6,3 +6,7 @@ visualizer_type = "wave" (spectrum/wave)
 #visualizer_look = "+|"
 allow_for_physical_item_deletion = "yes"
 enable_window_title = "yes"
+locked_screen_width_part = "50"
+startup_screen = "visualizer"
+autocenter_mode = "yes"
+follow_now_playing_lyrics = "yes"

@@ -22,7 +22,7 @@
 URxvt.scrollBar:            false
 URxvt.font:                 xft:terminus:size=18
 URxvt.termName:             screen-256color
-URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,fullscreen
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,fullscreen,resize-font
 URxvt.url-select.launcher:  chromium
 URxvt.url-select.underline: true
 URxvt.keysym.M-u:           perl:url-select:select_next
@@ -32,3 +32,5 @@ URxvt.keysym.F11:           perl:fullscreen:switch
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755:             false
+URxvt.resize-font.smaller:  C-Down
+URxvt.resize-font.bigger:   C-Up

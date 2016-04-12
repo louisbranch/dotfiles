@@ -20,7 +20,7 @@
 
 [push]
   #Only Push Upstream for the Current Branch
-  default = upstream
+	default = current
 
 [log]
     date = relative
