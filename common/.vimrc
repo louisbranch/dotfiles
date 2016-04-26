@@ -179,6 +179,7 @@ let g:go_auto_type_info = 1
 au FileType go nmap <Leader>d <Plug>(go-doc-vertical)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <leader>r <Plug>(go-rename)
 au FileType go nmap <leader>v <Plug>(go-vet)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverlay)

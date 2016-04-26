@@ -78,3 +78,8 @@ ta() { # attach ession
 ackr() {
   ack $1 -l --print0 | xargs -0 -n 1 sed -i "s/$1/$2/g"
 }
+
+tunnel() {
+  sshuttle -r luiz@$1 0/0
+}
+
