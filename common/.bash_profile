@@ -1,3 +1,5 @@
+export PAGER=most
+
 # Ruby Version Manager
 source /usr/share/chruby/chruby.sh
 source /usr/share/chruby/auto.sh
@@ -8,6 +10,7 @@ export NVM_DIR="/home/luiz/.nvm"
 
 # GO path
 export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
 export CDPATH=:$GOPATH/src/github.com/luizbranco/
@@ -27,4 +30,4 @@ export CDPATH=$CDPATH:$GOPATH/src/github.com/MitreMedia
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-flat.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"

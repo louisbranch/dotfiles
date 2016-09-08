@@ -38,9 +38,12 @@
   r = !git l -30
   ra = !git r --all
   rmu = clean -f -d
+	d = difftool
 
 [merge]
   tool = vimdiff
+[mergetool "vimdiff"]
+  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 
 [github]
 	user = luizbranco
@@ -49,3 +52,9 @@
 	token = e16f5082b8db203f8cd3620c76413ff3f3a45e90
 [gh]
 	autoUpdate = always
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[difftool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE

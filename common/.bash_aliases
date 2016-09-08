@@ -17,6 +17,9 @@ alias eth='sudo systemctl start dhcpcd@enp0s25'
 alias wifi='sudo systemctl start netctl@mitre'
 alias sd='sudo systemctl'
 alias sdu='systemctl --user'
+alias xmain='xrandr --output HDMI-1 --auto --output VGA-1 --off --output eDP-1 --off'
+alias xdouble='xrandr --output HDMI-1 --auto --output VGA-1 --auto --right-of HDMI-1 --output eDP-1 --off'
+alias xlaptop='xrandr --output eDP-1 --auto --output HDMI-1 -off --output VGA-1 --off'
 
 #Shell
 alias ls='ls -h --color --group-directories-first'

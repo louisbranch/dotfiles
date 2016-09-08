@@ -129,6 +129,8 @@ Plug 'tpope/vim-surround'
 Plug 'garyburd/go-explorer'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
+Plug 'vim-ruby/vim-ruby'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -157,7 +159,7 @@ let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_mode_map = {
     \ "mode": "active",
-    \ "passive_filetypes": ["haml", "go"] }
+    \ "passive_filetypes": ["haml", "go", "ruby"] }
 
 " Vim Go
 let g:go_fmt_command = "goimports"
@@ -170,6 +172,8 @@ let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
+let g:go_template_autocreate = 0
+let g:go_list_type = "quickfix"
 "let g:go_term_enabled=1
 "let g:go_term_mode = "tab"
 
@@ -179,7 +183,7 @@ let g:go_auto_sameids = 1
 "au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 "au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 "au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <Leader>d <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>d <Plug>(go-doc)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>r <Plug>(go-rename)
