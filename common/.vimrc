@@ -198,9 +198,11 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Base16 Theme
-set background=dark
-let base16colorspace=256  " Access colors present in 256 colorspace"
-colorscheme base16-flat
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+  colorscheme base16-flat
+endif
 
 " Wrap lines and spell check for markdown files
 au BufRead,BufNewFile *.md setlocal textwidth=80 spell spelllang=en_us
