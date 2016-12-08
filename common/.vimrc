@@ -201,7 +201,6 @@ let g:ctrlp_cmd = 'CtrlP'
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
-  colorscheme base16-flat
 endif
 
 " Wrap lines and spell check for markdown files
