@@ -122,7 +122,6 @@ Plug 'mileszs/ack.vim'
 Plug 'qpkorr/vim-renamer'
 Plug 'raimondi/delimitMate'
 Plug 'scrooloose/syntastic'
-Plug 't-yuki/vim-go-coverlay'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -130,7 +129,9 @@ Plug 'garyburd/go-explorer'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ruby/vim-ruby'
+Plug 'vim-utils/vim-ruby-fold'
 Plug 'junegunn/goyo.vim'
+Plug 'buoto/gotests-vim'
 
 call plug#end()
 
@@ -187,10 +188,9 @@ au FileType go nmap <Leader>d <Plug>(go-doc)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>r <Plug>(go-rename)
-au FileType go nmap <leader>v <Plug>(go-vet)
+au FileType go nmap <leader>m <Plug>(go-metalinter)
 au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverlay)
-au FileType go nmap <leader>C <Plug>(go-clearlay)
+au FileType go nmap <leader>c <Plug>(go-coverage)
 au BufWritePost *.go :GoTest
 
 " CtrlP
