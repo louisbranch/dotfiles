@@ -131,6 +131,7 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ruby/vim-ruby'
 Plug 'junegunn/goyo.vim'
+Plug 'buoto/gotests-vim'
 
 call plug#end()
 
@@ -191,7 +192,7 @@ au FileType go nmap <leader>v <Plug>(go-vet)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverlay)
 au FileType go nmap <leader>C <Plug>(go-clearlay)
-au BufWritePost *.go :GoTest
+au BufWritePost *.go :GoTest!
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
