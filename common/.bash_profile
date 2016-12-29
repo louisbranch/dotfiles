@@ -1,7 +1,9 @@
 export PAGER=most
 
-# Ruby Version Manager
-source /usr/share/chruby/chruby.sh
+# Ruby
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+export GEM_PATH=$(ruby -e 'print Gem.user_dir')
 
 # Node Version Manager
 export NVM_DIR="/home/luiz/.nvm"
