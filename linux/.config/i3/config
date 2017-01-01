@@ -184,9 +184,9 @@ for_window [window_role="pop-up"] floating enable
 # Custom Keybinds
 bindsym XF86HomePage exec google-chrome-stable
 bindsym XF86TouchpadToggle exec google-chrome-stable
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5%
-bindsym XF86AudioMute exec kactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5dB- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioPrev exec mpc prev
