@@ -8,9 +8,6 @@ export GEM_PATH=$(ruby -e 'print Gem.user_dir')
 # GO path
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$GOPATH/bin
-
-export CDPATH=$HOME:$GOPATH/src/github.com/luizbranco/
 
 # Set additional configs for git
 source /usr/share/git/completion/git-completion.bash
@@ -23,7 +20,6 @@ for file in $HOME/.{extra,bash_prompt,exports,bash_aliases,mitrerc,functions}; d
   [ -r "$file" ] && source "$file"
 done
 unset file
-export CDPATH=$CDPATH:$GOPATH/src/github.com/MitreMedia
 
 # Base16 Shell
 BASE16_SHELL=$HOME/.config/base16-shell/

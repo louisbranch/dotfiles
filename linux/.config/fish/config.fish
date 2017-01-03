@@ -1,3 +1,5 @@
+set PATH $GOPATH/bin $PATH
+
 # fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
@@ -82,17 +84,17 @@ alias gdc='git diff --cached'
 
 # New branch from master
 function gbn
-  gcm and git checkout -b $1
+  gcm and git checkout -b $argv[1]
 end
 
 # Delete branch local and remote
 function gbd
-  git branch -D $1 and git push origin :$1
+  git branch -D $argv[1] and git push origin :$argv[1]
 end
 
 # Git rebase interactively last n commits
 function gri
-  git rebase -i HEAD~$1
+  git rebase -i HEAD~$argv[1]
 end
 
 # Push new branch
