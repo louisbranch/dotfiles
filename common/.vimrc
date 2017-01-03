@@ -190,8 +190,9 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>r <Plug>(go-rename)
 au FileType go nmap <leader>m <Plug>(go-metalinter)
 au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au BufWritePost *.go :GoTest
+au FileType go nmap <leader>c <Plug>(go-coverlay)
+au FileType go nmap <leader>C <Plug>(go-clearlay)
+au BufWritePost *.go :GoTest!
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'

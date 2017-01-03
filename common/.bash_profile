@@ -1,15 +1,16 @@
 export PAGER=most
 
-# Ruby Version Manager
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+# Ruby
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+export GEM_PATH=$(ruby -e 'print Gem.user_dir')
 
 # GO path
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
-export CDPATH=:$GOPATH/src/github.com/luizbranco/
+export CDPATH=$HOME:$GOPATH/src/github.com/luizbranco/
 
 # Set additional configs for git
 source /usr/share/git/completion/git-completion.bash
