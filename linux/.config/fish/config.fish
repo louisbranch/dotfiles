@@ -78,18 +78,18 @@ alias gpp='git push'
 alias gcm='git checkout master'
 alias gcp='git checkout production'
 alias gcs='git checkout stable'
-alias gfr='git fetch and git rebase'
+alias gfr='git fetch; and git rebase'
 alias gd='git diff .'
 alias gdc='git diff --cached'
 
 # New branch from master
 function gbn
-  gcm and git checkout -b $argv[1]
+  gcm; and git checkout -b $argv[1]
 end
 
 # Delete branch local and remote
 function gbd
-  git branch -D $argv[1] and git push origin :$argv[1]
+  git branch -D $argv[1]; and git push origin :$argv[1]
 end
 
 # Git rebase interactively last n commits
@@ -100,6 +100,10 @@ end
 # Push new branch
 function gpn
   git push -u
+end
+
+function test_args
+  echo $argv[1]
 end
 
 #Pacman
