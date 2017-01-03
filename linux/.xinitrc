@@ -8,6 +8,9 @@ if [ -s ~/.Xmodmap ]; then
   xmodmap ~/.Xmodmap
 fi
 
+# Preventing TTY to stop receiving signal on CTRL S
+#stty -ixon
+
 # Active Numlock on boot, requires numlockx
 numlockx &
 

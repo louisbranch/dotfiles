@@ -24,6 +24,15 @@ if status --is-interactive
     eval sh $HOME/.config/base16-shell/scripts/base16-tomorrow-night.sh
 end
 
+fish_vi_key_bindings
+set -g __fish_vi_mode 1
+
+function fish_user_key_bindings
+    for mode in insert default visual
+        bind -M $mode \cf forward-char
+    end
+end
+
 # Aliases
 
 #Programs
