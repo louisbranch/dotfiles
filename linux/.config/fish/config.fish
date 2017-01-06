@@ -1,4 +1,6 @@
+set CDPATH $HOME/code $CDPATH
 set PATH $GOPATH/bin $PATH
+set PATH /usr/lib/smlnj/bin $PATH
 
 # fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
@@ -44,7 +46,7 @@ alias open='xdg-open'
 alias ctrlc='xclip -se c'
 alias music='ncmpcpp'
 alias be='bundle exec'
-alias spec='find app lib spec -name "*.rb" | entr -c bundle exec rspec --no-profile --tag focus'
+alias spec='find app lib spec -name "*.rb" | entr -c bundle exec rspec --no-profile --tag focus --next-failure'
 alias cop='bundle exec rubocop -D --rails -a'
 alias jspec='find app lib spec -name "*.js" | entr -c mocha --reporter dot spec/javascripts'
 alias plex='sudo systemctl start plexmediaserver'
