@@ -1,11 +1,6 @@
-common/.vim/plugged/
-common/.vim/.netrwhist
-common/.vim/autoload/
-common/.weechat/irc.conf
-common/.weechat/logs
-common/.weechat/perl
-common/.weechat/python
-common/.weechat/script
-linux/.config/
-linux/.gnupg
+.vim/plugged/
+.vim/.netrwhist
+.vim/autoload/
+.config/
+.gnupg
 *.log
