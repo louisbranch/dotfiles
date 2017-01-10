@@ -1,4 +1,4 @@
-set CDPATH $HOME/code $CDPATH
+set CDPATH . ~ $HOME/code
 set PATH $GOPATH/bin $PATH
 set PATH /usr/lib/smlnj/bin $PATH
 

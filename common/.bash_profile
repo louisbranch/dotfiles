@@ -7,7 +7,7 @@ export GEM_PATH=$(ruby -e 'print Gem.user_dir')
 
 # GO path
 export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # Set additional configs for git
 source /usr/share/git/completion/git-completion.bash
