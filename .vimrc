@@ -106,7 +106,7 @@ map <space> /
 map <c-space> ?
 
 " Plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/shared/nvim/plugged')
 
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
