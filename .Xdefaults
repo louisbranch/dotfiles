@@ -20,7 +20,7 @@
 *color15:   #e8e9ca
 
 URxvt.scrollBar:            false
-URxvt.font:                 xft:terminus:size=18
+URxvt.font:                 xft:xos4 Terminus:size=18
 URxvt.termName:             screen-256color
 URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,fullscreen,resize-font
 URxvt.url-select.launcher:  chromium
