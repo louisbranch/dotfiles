@@ -1,0 +1,2 @@
+# Keep snd-usb-audio from beeing loaded as first soundcard
+options snd-usb-audio index=-2
