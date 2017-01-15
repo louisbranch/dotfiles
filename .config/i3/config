@@ -213,3 +213,5 @@ bindsym $mod+Shift+e mode "(L)ock, (E)xit, (R)eboot, (P)oweroff"
 #workspace $WS2 output VGA-1
 #workspace $WS3 output eDP-1
 #workspace $WS4 output eDP-1
+
+exec --no-startup-id nightshift
