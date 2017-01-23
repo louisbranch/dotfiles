@@ -4,6 +4,8 @@ syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 filetype plugin on
 
+setlocal spell
+
 " Set Unicode
 if has("multi_byte")
   if &termencoding == ""
