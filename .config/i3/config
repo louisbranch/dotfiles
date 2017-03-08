@@ -159,23 +159,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        mode hide
-        font pango:Liberation Mono 14
-        strip_workspace_numbers yes
-        status_command conky -c $HOME/.config/conky/conkyrc
-  colors {
-        background #161616
-        statusline #A7A7A7
-        focused_workspace  #161616 #161616 #FFFFFF
-        active_workspace   #161616 #161616 #EEEEEE
-        inactive_workspace #161616 #161616 #666666
-        urgent_workspace   #00875F #00875F #FFFFFF
-    }
-}
-
 # Remove title and border
 new_window none
 
@@ -214,4 +197,4 @@ bindsym $mod+Shift+e mode "(L)ock, (E)xit, (R)eboot, (P)oweroff"
 #workspace $WS3 output eDP-1
 #workspace $WS4 output eDP-1
 
-exec --no-startup-id nightshift
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
