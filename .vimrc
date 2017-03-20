@@ -134,6 +134,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'vim-utils/vim-ruby-fold'
 Plug 'junegunn/goyo.vim'
 Plug 'buoto/gotests-vim'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
