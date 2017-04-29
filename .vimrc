@@ -17,7 +17,7 @@ if has("multi_byte")
   set fileencodings=ucs-bom,utf-8,latin1
 endif"
 
-:let mapleader = ","              " Map leader to , (ABNT2 Keyboard)
+:let mapleader = ","              " Map leader to ,
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -60,7 +60,7 @@ set softtabstop=2                " Global softtab width.
 set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
 
-set laststatus=2                  " Show the status line all the time
+set laststatus=2                 " Show the status line all the time
 
 " 81 column highlight
 set colorcolumn=81
@@ -103,38 +103,29 @@ nnoremap <C-n> :call NumberToggle()<cr>
 " Toggle Spellcheck
 nnoremap <silent> <leader>ss :setlocal spell!<cr>
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
-
 " Plugins
 call plug#begin('~/.local/shared/nvim/plugged')
 
 Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'buoto/gotests-vim'
 Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
-Plug 'garbas/vim-snipmate'
-Plug 'garyburd/go-explorer'
 Plug 'godlygeek/tabular'
-Plug 'honza/vim-snippets'
-Plug 'marcWeber/vim-addon-mw-utils'
 Plug 'mileszs/ack.vim'
-Plug 'qpkorr/vim-renamer'
+Plug 'neomake/neomake'
 Plug 'raimondi/delimitMate'
-Plug 'scrooloose/syntastic'
-Plug 'tomtom/tlib_vim'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'garyburd/go-explorer'
-Plug 'majutsushi/tagbar'
+Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-ruby/vim-ruby'
-Plug 'vim-utils/vim-ruby-fold'
-Plug 'junegunn/goyo.vim'
-Plug 'buoto/gotests-vim'
-Plug 'leafgarland/typescript-vim'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline-themes'
+
+" Snippets Plugins
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -161,6 +152,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_compiler_options = '-std=c++11'
+let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_mode_map = {
     \ "mode": "active",
     \ "passive_filetypes": ["haml", "go", "ruby"] }
@@ -178,15 +170,8 @@ let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
 let g:go_template_autocreate = 0
 let g:go_list_type = "quickfix"
-"let g:go_term_enabled=1
-"let g:go_term_mode = "tab"
+let g:go_quickfix_height = 1
 
-"au FileType go nmap <Leader>gd <Plug>(go-doc)
-"au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-"au FileType go nmap <Leader>ds <Plug>(go-def-split)
-"au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-"au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-"au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <Leader>d <Plug>(go-doc)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>c <Plug>(go-coverage)
@@ -196,6 +181,14 @@ au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverlay)
 au FileType go nmap <leader>C <Plug>(go-clearlay)
 au BufWritePost *.go :GoTest!
+
+au BufWritePost *h,*.cpp :Autoformat
+
+" Rust
+let g:rustfmt_autosave = 1
+let g:neomake_echo_current_error=1
+let g:neomake_verbose=0
+autocmd! BufWritePost *.rs NeomakeProject cargo
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
@@ -210,31 +203,7 @@ endif
 " Wrap lines and spell check for markdown files
 au BufRead,BufNewFile *.md setlocal textwidth=80 spell spelllang=en_us
 
-" Tagbar
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
+" Ack - use Ripgrep instead
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
+endif
