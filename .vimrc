@@ -182,8 +182,6 @@ au FileType go nmap <leader>c <Plug>(go-coverlay)
 au FileType go nmap <leader>C <Plug>(go-clearlay)
 au BufWritePost *.go :GoTest!
 
-au BufWritePost *h,*.cpp :Autoformat
-
 " Rust
 let g:rustfmt_autosave = 1
 let g:neomake_echo_current_error=1
