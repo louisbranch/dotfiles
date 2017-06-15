@@ -107,27 +107,21 @@ nnoremap <silent> <leader>ss :setlocal spell!<cr>
 call plug#begin('~/.local/shared/nvim/plugged')
 
 Plug 'bling/vim-airline'
-Plug 'buoto/gotests-vim'
 Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
+Plug 'SirVer/ultisnips'
 Plug 'godlygeek/tabular'
 Plug 'mileszs/ack.vim'
-Plug 'neomake/neomake'
 Plug 'raimondi/delimitMate'
-Plug 'rust-lang/rust.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
+Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline-themes'
 
-" Snippets Plugins
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-
 call plug#end()
+
+let g:UltiSnipsExpandTrigger="<tab>"
 
 let g:airline_theme="luna"
 let g:airline#extensions#tabline#enabled=1
@@ -143,7 +137,7 @@ let g:airline_right_sep=''
 
 " Syntastic
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
@@ -178,15 +172,10 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>r <Plug>(go-rename)
 au FileType go nmap <leader>m <Plug>(go-metalinter)
 au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>f <Plug>(go-test-func)
 au FileType go nmap <leader>c <Plug>(go-coverlay)
 au FileType go nmap <leader>C <Plug>(go-clearlay)
-au BufWritePost *.go :GoTest!
-
-" Rust
-let g:rustfmt_autosave = 1
-let g:neomake_echo_current_error=1
-let g:neomake_verbose=0
-autocmd! BufWritePost *.rs NeomakeProject cargo
+"au BufWritePost *.go :GoTest
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
