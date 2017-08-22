@@ -191,11 +191,11 @@ mode "(L)ock, (E)xit, (R)eboot, (P)oweroff" {
 
 bindsym $mod+Shift+e mode "(L)ock, (E)xit, (R)eboot, (P)oweroff"
 
-exec --no-startup-id xrandr --output HDMI-1 --auto --output VGA-1 --auto --right-of HDMI-1 --output eDP-1 --off
+exec --no-startup-id xrandr --output HDMI-1 --auto --output VGA-1 --auto --right-of HDMI-1 --output eDP-1 --auto --right-of VGA-1 --mode "2880x1620" --scale "0.5x0.5"
 exec --no-startup-id redshift
 workspace $WS1 output HDMI-1
 workspace $WS2 output VGA-1
-workspace $WS3 output VGA-1
+workspace $WS3 output eDP-1
 
 exec feh --bg-fill --no-xinerama ~/.wallpaper.jpg
 

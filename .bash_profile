@@ -1,4 +1,6 @@
+export EDITOR=nvim
 export PAGER=most
+export HISTCONTROL=ignoredups
 
 # Ruby
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
