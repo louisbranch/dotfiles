@@ -27,8 +27,8 @@ font pango:Liberation Mono 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt -e bash -c "tmux"
-bindsym $mod+Shift+Return exec urxvt
+bindsym $mod+Return exec alacritty -e bash -c "tmux"
+bindsym $mod+Shift+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -168,9 +168,9 @@ for_window [window_role="pop-up"] floating enable
 # Custom Keybinds
 bindsym XF86HomePage exec google-chrome-stable
 bindsym XF86TouchpadToggle exec google-chrome-stable
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioPrev exec mpc prev
@@ -191,12 +191,12 @@ mode "(L)ock, (E)xit, (R)eboot, (P)oweroff" {
 
 bindsym $mod+Shift+e mode "(L)ock, (E)xit, (R)eboot, (P)oweroff"
 
-exec --no-startup-id xrandr --output HDMI-1 --auto --output VGA-1 --auto --right-of HDMI-1 --output eDP-1 --off
+#exec --no-startup-id xrandr --output HDMI-1 --auto --output VGA-1 --auto --right-of HDMI-1 --output eDP-1 --off
 exec --no-startup-id redshift
-workspace $WS1 output HDMI-1
-workspace $WS2 output VGA-1
-workspace $WS3 output VGA-1
+#workspace $WS1 output HDMI-1
+#workspace $WS2 output VGA-1
+#workspace $WS3 output VGA-1
 
-exec feh --bg-fill --no-xinerama ~/.wallpaper.jpg
+exec feh --bg-fill --no-xinerama ~/.wallpaper.png
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

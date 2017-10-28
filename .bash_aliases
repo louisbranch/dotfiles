@@ -4,12 +4,9 @@ alias vim='nvim'
 alias open='xdg-open'
 alias ctrlc='xclip -se c'
 alias music='ncmpcpp'
-alias be='bundle exec'
-alias spec='find app lib spec -name "*.rb" | entr -c bundle exec rspec --no-profile --tag focus'
-alias cop='bundle exec rubocop -D --rails -a'
-alias jspec='find app lib spec -name "*.js" | entr -c mocha --reporter dot spec/javascripts'
-alias plex='sudo systemctl start plexmediaserver'
-alias vpnny='sudo openvpn --config /etc/openvpn/US_New_York_City.conf'
+alias remake='make && make docker && docker-compose down && docker-compose up -d; alarm remade'
+alias cleanstate='docker-compose down -v && docker-compose pull && docker-compose up -d && remake; alarm cleanstate'
+alias gt='gt ./...'
 
 #System
 alias off='poweroff'
@@ -79,12 +76,6 @@ ta() { # attach ession
   fi
 }
 
-# Search and Replace
-ackr() {
-  ack $1 -l --print0 | xargs -0 -n 1 sed -i "s/$1/$2/g"
-}
-
 tunnel() {
   sshuttle -r luiz@$1 0/0
 }
-

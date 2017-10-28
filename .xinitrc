@@ -1,5 +1,5 @@
 # Starts urxvt daemon
-urxvtd -q -o -f
+# urxvtd -q -o -f
 
 xrdb -merge ~/.Xresources
 

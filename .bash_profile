@@ -1,10 +1,5 @@
 export PAGER=most
 
-# Ruby
-export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
-export GEM_HOME=$(ruby -e 'print Gem.user_dir')
-export GEM_PATH=$(ruby -e 'print Gem.user_dir')
-
 # GO path
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
@@ -17,10 +12,7 @@ export npm_config_prefix=~/.node_modules
 source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
 
-# Work Work
-export MITRE_WORKSPACE=$HOME/code
-
-for file in $HOME/.{extra,bash_prompt,exports,bash_aliases,mitrerc,functions}; do
+for file in $HOME/.{extra,bash_prompt,exports,bash_aliases,functions}; do
   [ -r "$file" ] && source "$file"
 done
 unset file

@@ -140,6 +140,7 @@ set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_go_checkers = ['go', 'golint', 'govet']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -149,10 +150,13 @@ let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_mode_map = {
     \ "mode": "active",
-    \ "passive_filetypes": ["haml", "go", "ruby"] }
+    \ "passive_filetypes": ["haml", "ruby"] }
 
 " Vim Go
 let g:go_fmt_command = "goimports"
+let g:go_fmt_options = {
+    \ 'gofmt': '-s' }
+let g:go_def_mode = "guru"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -160,11 +164,11 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
-let g:go_auto_type_info = 1
+let g:go_auto_type_info = 0
 let g:go_auto_sameids = 1
 let g:go_template_autocreate = 0
 let g:go_list_type = "quickfix"
-let g:go_quickfix_height = 1
+let g:go_list_height = 10
 
 au FileType go nmap <Leader>d <Plug>(go-doc)
 au FileType go nmap <leader>b <Plug>(go-build)
