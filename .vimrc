@@ -118,10 +118,13 @@ Plug 'raimondi/delimitMate'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jodosha/vim-godebug'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 call plug#end()
 
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-j>"
 
 let g:airline_theme="luna"
 let g:airline#extensions#tabline#enabled=1
@@ -179,11 +182,12 @@ au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>f <Plug>(go-test-func)
 au FileType go nmap <leader>c <Plug>(go-coverlay)
 au FileType go nmap <leader>C <Plug>(go-clearlay)
-"au BufWritePost *.go :GoTest
+"au BufWritePost *.go !gt ./...
+"au BufWritePost *_test.go :GoTest
 
 " CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+"let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_cmd = 'CtrlP'
 
 " Base16 Theme
 if filereadable(expand("~/.vimrc_background"))
@@ -198,3 +202,12 @@ au BufRead,BufNewFile *.md setlocal textwidth=80 spell spelllang=en_us
 if executable('rg')
   let g:ackprg = 'rg --vimgrep'
 endif
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+set completeopt-=preview
+
+" use tab to forward cycle
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" use tab to backward cycle
+inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"

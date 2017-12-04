@@ -20,9 +20,10 @@
 *color15:   #e8e9ca
 
 URxvt.scrollBar:            false
-URxvt.font:                 xft:xos4 Terminus:size=18
-URxvt.termName:             screen-256color
-URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,fullscreen,resize-font
+URxvt.font:                 xft:xos4 Terminus:size=18:antialias=False,xft:FontAwesome:antialias=false
+URxvt.letterSpace:          1
+#URxvt.termName:             screen-256color
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,fullscreen,resize-font,selection-autotransform
 URxvt.url-select.launcher:  chromium
 URxvt.url-select.underline: true
 URxvt.keysym.M-u:           perl:url-select:select_next

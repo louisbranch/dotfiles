@@ -6,7 +6,8 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # NPM
 export PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
+#export PATH=$PATH:$HOME/.config/yarn/global
+#export npm_config_prefix=~/.node_modules
 
 # Set additional configs for git
 source /usr/share/git/completion/git-completion.bash
